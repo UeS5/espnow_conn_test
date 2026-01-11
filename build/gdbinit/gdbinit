@@ -1,0 +1,2 @@
+source D:/Espressif/workspace/espnow_conn_test/build/gdbinit/symbols
+source D:/Espressif/workspace/espnow_conn_test/build/gdbinit/connect
