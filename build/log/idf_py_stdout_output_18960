@@ -1,0 +1,2849 @@
+Command: D:\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe D:\Espressif\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\Espressif\workspace\espnow_conn_test\build\espnow_conn_test.elf D:\Espressif\workspace\espnow_conn_test\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe' 'D:\Espressif\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.1-dev-786-g130fdc7ce7 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 11 2026 13:38:55[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17ce4h ( 97508) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00027d0c vaddr=3ffb0000 size=04124h ( 16676) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002be38 vaddr=40080000 size=041e0h ( 16864) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=80470h (525424) map[0m
+[0;32mI (326) esp_image: segment 4: paddr=000b0498 vaddr=400841e0 size=11258h ( 70232) load[0m
+[0;32mI (354) esp_image: segment 5: paddr=000c16f8 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (365) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (365) boot: Disabling RNG early entropy source...[0m
+[0;32mI (376) cpu_start: Multicore app[0m
+[0;32mI (384) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (384) cpu_start: Pro cpu start user code[0m
+[0;32mI (384) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (386) app_init: Application information:[0m
+[0;32mI (390) app_init: Project name:     espnow_conn_test[0m
+[0;32mI (395) app_init: App version:      1[0m
+[0;32mI (398) app_init: Compile time:     Jan 11 2026 13:34:59[0m
+[0;32mI (403) app_init: ELF file SHA256:  52b51ce37...[0m
+[0;32mI (408) app_init: ESP-IDF:          v6.1-dev-786-g130fdc7ce7[0m
+[0;32mI (413) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (417) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (421) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (425) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (431) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (436) heap_init: At 3FFB8548 len 00027AB8 (158 KiB): DRAM[0m
+[0;32mI (441) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (447) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (452) heap_init: At 40095438 len 0000ABC8 (42 KiB): IRAM[0m
+[0;33mW (459) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (470) spi_flash: detected chip: generic[0m
+[0;32mI (474) spi_flash: flash io: dio[0m
+[0;33mW (477) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (491) main_task: Started on CPU0[0m
+[0;32mI (501) main_task: Calling app_main()[0m
+Start of main
+[0;33mW (501) ESP-NOW: STARTING ESP-NOW...[0m
+00
+[0;33mW (511) ESP-NOW: WAITING FOR ESP-NOW TO START[0m
+[0;32mI (521) wifi:wifi driver task: 3ffc1b28, prio:23, stack:6656, core=0[0m
+[0;32mI (521) wifi:wifi firmware version: 6a8253a[0m
+[0;32mI (521) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (531) wifi:config nano formatting: disabled[0m
+[0;32mI (531) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (531) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (541) wifi:Init management short buffer num: 32[0m
+[0;32mI (541) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (551) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (551) wifi:Init static rx buffer num: 10[0m
+[0;32mI (561) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (561) wifi_init: rx ba win: 6[0m
+[0;32mI (561) wifi_init: accept mbox: 6[0m
+[0;32mI (561) wifi_init: tcpip mbox: 32[0m
+[0;32mI (571) wifi_init: udp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp tx win: 5760[0m
+[0;32mI (581) wifi_init: tcp rx win: 5760[0m
+[0;32mI (581) wifi_init: tcp mss: 1440[0m
+[0;32mI (581) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (591) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (591) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (681) wifi:mode : sta (78:1c:3c:f6:d6:cc)[0m
+[0;32mI (681) wifi:enable tsf[0m
+[0;32mI (691) ESPNOW: espnow [version: 2.0] init[0m
+[0;33mW (741) ESP-NOW: ESP-NOW INITIATED SUCCESSFULLY...[0m
+[0;33mW (1011) ESP-NOW: STARTING PAIRING MODE AND REGISTER MAC TASK[0m
+[0;33mW (1511) ESP-NOW: vTask_register_mac IS TRIGGERRED...[0m
+[0;32mI (1511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (2511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1011) ESP-NOW: STARTING PAIRING MODE AND REGISTER MAC TASK[0m
+[0;33mW (1511) ESP-NOW: vTask_register_mac IS TRIGGERRED...[0m
+[0;32mI (1511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (2511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (3511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (4511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (4511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (5511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1011) ESP-NOW: STARTING PAIRING MODE AND REGISTER MAC TASK[0m
+[0;33mW (1511) ESP-NOW: vTask_register_mac IS TRIGGERRED...[0m
+[0;32mI (1511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (2511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (3511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (4511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (4511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (5511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (6511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (7511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (7511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (8511) ESP-NOW: Broadcast packet sent successfully.[0m
+1I (9511) ESP-NOW: Broadcast packet sent successfully.
+0
+[0;32mI (10511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (10511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (11511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (12511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (13511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (13511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (14511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (15511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (16511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (16511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (17511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (18511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (19511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (19511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (20511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1011) ESP-NOW: STARTING PAIRING MODE AND REGISTER MAC TASK[0m
+[0;33mW (1511) ESP-NOW: vTask_register_mac IS TRIGGERRED...[0m
+[0;32mI (1511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (2511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (3511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (4511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (4511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (5511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (6511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (7511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (7511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (8511) ESP-NOW: Broadcast packet sent successfully.[0m
+1I (9511) ESP-NOW: Broadcast packet sent successfully.
+0
+[0;32mI (10511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (10511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (11511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (12511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (13511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (13511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (14511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (15511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (16511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (16511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (17511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (18511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (19511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (19511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (20511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (21511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (22511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (22511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (23511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (24511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (25511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (25511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (26511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (27511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (28511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (28511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (29511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (30511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (31511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (31511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (32511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (33511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (34511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (34511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (35511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (36511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (37511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (37511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (38511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (39511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (40511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (40511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (41511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (42511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (43511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (43511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (44511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (45511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (46511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (46511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (47511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (48511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (49511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (49511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (50511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (51511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (52511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (52511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (53511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (54511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (55511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (55511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (56511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (57511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (58511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (58511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (59511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (60511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (61511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (61511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (62511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (63511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (64511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (64511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (65511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (66511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (67511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (67511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (68511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (69511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (70511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (70511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (71511) ESP-NOW: Broadcast packet sent successfully.[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.1-dev-786-g130fdc7ce7 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 11 2026 13:38:55[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17ce4h ( 97508) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00027d0c vaddr=3ffb0000 size=04124h ( 16676) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002be38 vaddr=40080000 size=041e0h ( 16864) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=80470h (525424) map[0m
+[0;32mI (326) esp_image: segment 4: paddr=000b0498 vaddr=400841e0 size=11258h ( 70232) load[0m
+[0;32mI (354) esp_image: segment 5: paddr=000c16f8 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (365) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (365) boot: Disabling RNG early entropy source...[0m
+[0;32mI (376) cpu_start: Multicore app[0m
+[0;32mI (384) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (384) cpu_start: Pro cpu start user code[0m
+[0;32mI (384) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (386) app_init: Application information:[0m
+[0;32mI (390) app_init: Project name:     espnow_conn_test[0m
+[0;32mI (395) app_init: App version:      1[0m
+[0;32mI (398) app_init: Compile time:     Jan 11 2026 13:34:59[0m
+[0;32mI (403) app_init: ELF file SHA256:  52b51ce37...[0m
+[0;32mI (408) app_init: ESP-IDF:          v6.1-dev-786-g130fdc7ce7[0m
+[0;32mI (413) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (417) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (421) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (425) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (431) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (436) heap_init: At 3FFB8548 len 00027AB8 (158 KiB): DRAM[0m
+[0;32mI (441) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (447) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (452) heap_init: At 40095438 len 0000ABC8 (42 KiB): IRAM[0m
+[0;33mW (459) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (470) spi_flash: detected chip: generic[0m
+[0;32mI (474) spi_flash: flash io: dio[0m
+[0;33mW (477) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (491) main_task: Started on CPU0[0m
+[0;32mI (501) main_task: Calling app_main()[0m
+Start of main
+[0;33mW (501) ESP-NOW: STARTING ESP-NOW...[0m
+00
+[0;33mW (511) ESP-NOW: WAITING FOR ESP-NOW TO START[0m
+[0;32mI (521) wifi:wifi driver task: 3ffc1b28, prio:23, stack:6656, core=0[0m
+[0;32mI (521) wifi:wifi firmware version: 6a8253a[0m
+[0;32mI (521) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (531) wifi:config nano formatting: disabled[0m
+[0;32mI (531) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (531) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (541) wifi:Init management short buffer num: 32[0m
+[0;32mI (541) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (551) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (551) wifi:Init static rx buffer num: 10[0m
+[0;32mI (561) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (561) wifi_init: rx ba win: 6[0m
+[0;32mI (561) wifi_init: accept mbox: 6[0m
+[0;32mI (561) wifi_init: tcpip mbox: 32[0m
+[0;32mI (571) wifi_init: udp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp tx win: 5760[0m
+[0;32mI (581) wifi_init: tcp rx win: 5760[0m
+[0;32mI (581) wifi_init: tcp mss: 1440[0m
+[0;32mI (581) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (591) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (591) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (681) wifi:mode : sta (78:1c:3c:f6:d6:cc)[0m
+[0;32mI (681) wifi:enable tsf[0m
+[0;32mI (691) ESPNOW: espnow [version: 2.0] init[0m
+[0;33mW (741) ESP-NOW: ESP-NOW INITIATED SUCCESSFULLY...[0m
+[0;33mW (1011) ESP-NOW: STARTING PAIRING MODE AND REGISTER MAC TASK[0m
+[0;33mW (1511) ESP-NOW: vTask_register_mac IS TRIGGERRED...[0m
+[0;32mI (1511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (2511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (3511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (4511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (4511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (5511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (6511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (7511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (7511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (8511) ESP-NOW: Broadcast packet sent successfully.[0m
+1I (9511) ESP-NOW: Broadcast packet sent successfully.
+0
+[0;32mI (10511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (10511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (11511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (12511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (13511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (13511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (14511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (15511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (16511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (16511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (17511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (18511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (19511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (19511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (20511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (21511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (22511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (22511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (23511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (24511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (25511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (25511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (26511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (27511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (28511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (28511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (29511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (30511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (31511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (31511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (32511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (33511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (34511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (34511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (35511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (36511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (37511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (37511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (38511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (39511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (40511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (40511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (41511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (42511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (43511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (43511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (44511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (45511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (46511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (46511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (47511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (48511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (49511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (49511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (50511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (51511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (52511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (52511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (53511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (54511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (55511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (55511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (56511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (57511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (58511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (58511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (59511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (60511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (61511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (61511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (62511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (63511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (64511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (64511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (65511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (66511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (67511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (67511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (68511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (69511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (70511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (70511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (71511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (72511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (73511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (73511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (74511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (75511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (76511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (76511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (77511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (78511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (79511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (79511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (80511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (81511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (82511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (82511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (83511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (84511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (85511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (85511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (86511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (87511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (88511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (88511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (89511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (90511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (91511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (91511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (92511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (93511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (94511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (94511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (95511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (96511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (97511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (97511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (98511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (99511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (100511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (100511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (101511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (102511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (103511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (103511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (104511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (105511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (106511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (106511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (107511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (108511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (109511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (109511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (110511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (111511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (112511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (112511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (113511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (114511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (115511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (115511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (116511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (117511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (118511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (118511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (119511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (120511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (121511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (121511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (122511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (123511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (124511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (124511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (125511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (126511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (127511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (127511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (128511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (129511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (130511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (130511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (131511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (132511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (133511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (133511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (134511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (135511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (136511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (136511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (137511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (138511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (139511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (139511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (140511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (141511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (142511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (142511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (143511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (144511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (145511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (145511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (146511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (147511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (148511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (148511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (149511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (150511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (151511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (151511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (152511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (153511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (154511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (154511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (155511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (156511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (157511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (157511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (158511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (159511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (160511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (160511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (161511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (162511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (163511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (163511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (164511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (165511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (166511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (166511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (167511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (168511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (169511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (169511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (170511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (171511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (172511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (172511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (173511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (174511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (175511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (175511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (176511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (177511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (178511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (178511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (179511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (180511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (181511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (181511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (182511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (183511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (184511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (184511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (185511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (186511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (187511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (187511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (188511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (189511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (190511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (190511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (191511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (192511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (193511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (193511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (194511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (195511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (196511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (196511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (197511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (198511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (199511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (199511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (200511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (201511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (202511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (202511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (203511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (204511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (205511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (205511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (206511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (207511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (208511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (208511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (209511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (210511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (211511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (211511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (212511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (213511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (214511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (214511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (215511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (216511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (217511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (217511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (218511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (219511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (220511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (220511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (221511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (222511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (223511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (223511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (224511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (225511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (226511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (226511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (227511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (228511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (229511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (229511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (230511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (231511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (232511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (232511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (233511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (234511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (235511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (235511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (236511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (237511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (238511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (238511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (239511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (240511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (241511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (241511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (242511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (243511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (244511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (244511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (245511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (246511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (247511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (247511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (248511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (249511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (250511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (250511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (251511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (252511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (253511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (253511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (254511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (255511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (256511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (256511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (257511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (258511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (259511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (259511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (260511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (261511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (262511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (262511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (263511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (264511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (265511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (265511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (266511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (267511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (268511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (268511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (269511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (270511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (271511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (271511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (272511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (273511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (274511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (274511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (275511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (276511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (277511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (277511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (278511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (279511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (280511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (280511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (281511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (282511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (283511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (283511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (284511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (285511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (286511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (286511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (287511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (288511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (289511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (289511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (290511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (291511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (292511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (292511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (293511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (294511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (295511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (295511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (296511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (297511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (298511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (298511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (299511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (300511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (301511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (301511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (302511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (303511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (304511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (304511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (305511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (306511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (307511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (307511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (308511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (309511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (310511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (310511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (311511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (312511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (313511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (313511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (314511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (315511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (316511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (316511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (317511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (318511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (319511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (319511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (320511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (321511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (322511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (322511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (323511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (324511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (325511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (325511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (326511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (327511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (328511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (328511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (329511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (330511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (331511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (331511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (332511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (333511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (334511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (334511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (335511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (336511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (337511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (337511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (338511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (339511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (340511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (340511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (341511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (342511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (343511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (343511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (344511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (345511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (346511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (346511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (347511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (348511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (349511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (349511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (350511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (351511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (352511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (352511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (353511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (354511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (355511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (355511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (356511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (357511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (358511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (358511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (359511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (360511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (361511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (361511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (362511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (363511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (364511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (364511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (365511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (366511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (367511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (367511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (368511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (369511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (370511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (370511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (371511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (372511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (373511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (373511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (374511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (375511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (376511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (376511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (377511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (378511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (379511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (379511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (380511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (381511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (382511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (382511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (383511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (384511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (385511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (385511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (386511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (387511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (388511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (388511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (389511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (390511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (391511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (391511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (392511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (393511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (394511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (394511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (395511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (396511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (397511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (397511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (398511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (399511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (400511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (400511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (401511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (402511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (403511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (403511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (404511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (405511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (406511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (406511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (407511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (408511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (409511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (409511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (410511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (411511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (412511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (412511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (413511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (414511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (415511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (415511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (416511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (417511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (418511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (418511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (419511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (420511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (421511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (421511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (422511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (423511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (424511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (424511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (425511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (426511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (427511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (427511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (428511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (429511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (430511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (430511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (431511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (432511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (433511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (433511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (434511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (435511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (436511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (436511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (437511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (438511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (439511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (439511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (440511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (441511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (442511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (442511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (443511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (444511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (445511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (445511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (446511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (447511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (448511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (448511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (449511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (450511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (451511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (451511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (452511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (453511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (454511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (454511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (455511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (456511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (457511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (457511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (458511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (459511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (460511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (460511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (461511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (462511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (463511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (463511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (464511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (465511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (466511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (466511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (467511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (468511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (469511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (469511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (470511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (471511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (472511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (472511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (473511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (474511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (475511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (475511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (476511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (477511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (478511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (478511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (479511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (480511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (481511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (481511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (482511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (483511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (484511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (484511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (485511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (486511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (487511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (487511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (488511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (489511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (490511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (490511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (491511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (492511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (493511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (493511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (494511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (495511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (496511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (496511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (497511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (498511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (499511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (499511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (500511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (501511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (502511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (502511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (503511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (504511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (505511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (505511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (506511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (507511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (508511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (508511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (509511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (510511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (511511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (511511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (512511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (513511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (514511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (514511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (515511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (516511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (517511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (517511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (518511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (519511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (520511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (520511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (521511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (522511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (523511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (523511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (524511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (525511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (526511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (526511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (527511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (528511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (529511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (529511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (530511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (531511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (532511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (532511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (533511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (534511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (535511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (535511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (536511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (537511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (538511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (538511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (539511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (540511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (541511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (541511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (542511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (543511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (544511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (544511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (545511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (546511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (547511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (547511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (548511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (549511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (550511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (550511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (551511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (552511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (553511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (553511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (554511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (555511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (556511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (556511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (557511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (558511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (559511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (559511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (560511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (561511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (562511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (562511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (563511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (564511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (565511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (565511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (566511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (567511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (568511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (568511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (569511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (570511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (571511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (571511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (572511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (573511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (574511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (574511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (575511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (576511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (577511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (577511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (578511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (579511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (580511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (580511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (581511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (582511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (583511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (583511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (584511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (585511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (586511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (586511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (587511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (588511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (589511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (589511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (590511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (591511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (592511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (592511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (593511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (594511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (595511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (595511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (596511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (597511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (598511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (598511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (599511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (600511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (601511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (601511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (602511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (603511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (604511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (604511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (605511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (606511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (607511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (607511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (608511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (609511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (610511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (610511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (611511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (612511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (613511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (613511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (614511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (615511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (616511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (616511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (617511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (618511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (619511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (619511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (620511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (621511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (622511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (622511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (623511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (624511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (625511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (625511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (626511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (627511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (628511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (628511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (629511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (630511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (631511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (631511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (632511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (633511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (634511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (634511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (635511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (636511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (637511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (637511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (638511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (639511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (640511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (640511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (641511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (642511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (643511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (643511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (644511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (645511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (646511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (646511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (647511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (648511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (649511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (649511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (650511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (651511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (652511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (652511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (653511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (654511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (655511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (655511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (656511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (657511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (658511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (658511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (659511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (660511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (661511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (661511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (662511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (663511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (664511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (664511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (665511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (666511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (667511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (667511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (668511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (669511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (670511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (670511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (671511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (672511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (673511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (673511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (674511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (675511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (676511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (676511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (677511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (678511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (679511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (679511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (680511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (681511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (682511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (682511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (683511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (684511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (685511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (685511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (686511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (687511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (688511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (688511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (689511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (690511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (691511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (691511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (692511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (693511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (694511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (694511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (695511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (696511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (697511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (697511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (698511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (699511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (700511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (700511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (701511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (702511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (703511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (703511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (704511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (705511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (706511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (706511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (707511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (708511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (709511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (709511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (710511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (711511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (712511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (712511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (713511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (714511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (715511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (715511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (716511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (717511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (718511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (718511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (719511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (720511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (721511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (721511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (722511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (723511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (724511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (724511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (725511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (726511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (727511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (727511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (728511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (729511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (730511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (730511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (731511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (732511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (733511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (733511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (734511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (735511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (736511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (736511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (737511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (738511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (739511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (739511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (740511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (741511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (742511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (742511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (743511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (744511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (745511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (745511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (746511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (747511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (748511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (748511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (749511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (750511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (751511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (751511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (752511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (753511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (754511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (754511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (755511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (756511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (757511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (757511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (758511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (759511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (760511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (760511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (761511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (762511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (763511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (763511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (764511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (765511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (766511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (766511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (767511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (768511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (769511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (769511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (770511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (771511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (772511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (772511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (773511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (774511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (775511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (775511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (776511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (777511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (778511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (778511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (779511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (780511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (781511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (781511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (782511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (783511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (784511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (784511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (785511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (786511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (787511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (787511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (788511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (789511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (790511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (790511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (791511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (792511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (793511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (793511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (794511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (795511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (796511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (796511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (797511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (798511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (799511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (799511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (800511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (801511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (802511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (802511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (803511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (804511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (805511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (805511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (806511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (807511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (808511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (808511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (809511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (810511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (811511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (811511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (812511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (813511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (814511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (814511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (815511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (816511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (817511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (817511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (818511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (819511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (820511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (820511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (821511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (822511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (823511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (823511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (824511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (825511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (826511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (826511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (827511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (828511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (829511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (829511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (830511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (831511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (832511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (832511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (833511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (834511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (835511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (835511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (836511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (837511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (838511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (838511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (839511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (840511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (841511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (841511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (842511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (843511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (844511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (844511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (845511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (846511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (847511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (847511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (848511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (849511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (850511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (850511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (851511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (852511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (853511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (853511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (854511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (855511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (856511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (856511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (857511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (858511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (859511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (859511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (860511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (861511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (862511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (862511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (863511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (864511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (865511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (865511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (866511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (867511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (868511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (868511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (869511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (870511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (871511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (871511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (872511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (873511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (874511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (874511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (875511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (876511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (877511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (877511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (878511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (879511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (880511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (880511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (881511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (882511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (883511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (883511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (884511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (885511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (886511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (886511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (887511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (888511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (889511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (889511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (890511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (891511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (892511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (892511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (893511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (894511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (895511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (895511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (896511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (897511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (898511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (898511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (899511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (900511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (901511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (901511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (902511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (903511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (904511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (904511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (905511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (906511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (907511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (907511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (908511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (909511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (910511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (910511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (911511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (912511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (913511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (913511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (914511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (915511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (916511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (916511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (917511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (918511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (919511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (919511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (920511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (921511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (922511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (922511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (923511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (924511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (925511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (925511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (926511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (927511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (928511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (928511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (929511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (930511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (931511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (931511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (932511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (933511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (934511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (934511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (935511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (936511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (937511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (937511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (938511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (939511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (940511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (940511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (941511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (942511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (943511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (943511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (944511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (945511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (946511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (946511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (947511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (948511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (949511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (949511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (950511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (951511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (952511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (952511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (953511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (954511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (955511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (955511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (956511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (957511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (958511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (958511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (959511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (960511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (961511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (961511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (962511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (963511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (964511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (964511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (965511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (966511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (967511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (967511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (968511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (969511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (970511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (970511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (971511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (972511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (973511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (973511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (974511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (975511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (976511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (976511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (977511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (978511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (979511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (979511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (980511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (981511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (982511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (982511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (983511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (984511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (985511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (985511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (986511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (987511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (988511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (988511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (989511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (990511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (991511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (991511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (992511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (993511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (994511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (994511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (995511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (996511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (997511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (997511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (998511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (999511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1000511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1000511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1001511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1002511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1003511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1003511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1004511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1005511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1006511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1006511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1007511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1008511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1009511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1009511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1010511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1011511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1012511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1012511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1013511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1014511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1015511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1015511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1016511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1017511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1018511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1018511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1019511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1020511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1021511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1021511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1022511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1023511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1024511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1024511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1025511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1026511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1027511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1027511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1028511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1029511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1030511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1030511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1031511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1032511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1033511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1033511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1034511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1035511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1036511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1036511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1037511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1038511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1039511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1039511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1040511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1041511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1042511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1042511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1043511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1044511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1045511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1045511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1046511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1047511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1048511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1048511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1049511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1050511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1051511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1051511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1052511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1053511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1054511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1054511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1055511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1056511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1057511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1057511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1058511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1059511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1060511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1060511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1061511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1062511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1063511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1063511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1064511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1065511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1066511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1066511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1067511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1068511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1069511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1069511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1070511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1071511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1072511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1072511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1073511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1074511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1075511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1075511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1076511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1077511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1078511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1078511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1079511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1080511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1081511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1081511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1082511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1083511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1084511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1084511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1085511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1086511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1087511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1087511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1088511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1089511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1090511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1090511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1091511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1092511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1093511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1093511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1094511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1095511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1096511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1096511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1097511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1098511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1099511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1099511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1100511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1101511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1102511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1102511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1103511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1104511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1105511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1105511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1106511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1107511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1108511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1108511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1109511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1110511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1111511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1111511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1112511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1113511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1114511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1114511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1115511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1116511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1117511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1117511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1118511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1119511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1120511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1120511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1121511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1122511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1123511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1123511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1124511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1125511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1126511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1126511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1127511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1128511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1129511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1129511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1130511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1131511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1132511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1132511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1133511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1134511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1135511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1135511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1136511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1137511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1138511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1138511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1139511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1140511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1141511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1141511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1142511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1143511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1144511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1144511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1145511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1146511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1147511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1147511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1148511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1149511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1150511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1150511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1151511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1152511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1153511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1153511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1154511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1155511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1156511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1156511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1157511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1158511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1159511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1159511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1160511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1161511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1162511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1162511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1163511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1164511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1165511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1165511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1166511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1167511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1168511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1168511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1169511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1170511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1171511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1171511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1172511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1173511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1174511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1174511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1175511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1176511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1177511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1177511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1178511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1179511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1180511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1180511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1181511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1182511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1183511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1183511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1184511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1185511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1186511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1186511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1187511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1188511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1189511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1189511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1190511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1191511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1192511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1192511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1193511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1194511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1195511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1195511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1196511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1197511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1198511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1198511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1199511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1200511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1201511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1201511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1202511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1203511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1204511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1204511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1205511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1206511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1207511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1207511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1208511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1209511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1210511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1210511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1211511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1212511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1213511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1213511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1214511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1215511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1216511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1216511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1217511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1218511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1219511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1219511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1220511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1221511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1222511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1222511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1223511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1224511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1225511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1225511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1226511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1227511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1228511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1228511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1229511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1230511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1231511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1231511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1232511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1233511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1234511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1234511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1235511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1236511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1237511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1237511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1238511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1239511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1240511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1240511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1241511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1242511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1243511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1243511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1244511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1245511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1246511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1246511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1247511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1248511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1249511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1249511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1250511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1251511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1252511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1252511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1253511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1254511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1255511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1255511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1256511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1257511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1258511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1258511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1259511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1260511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1261511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1261511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1262511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1263511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1264511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1264511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1265511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1266511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1267511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1267511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1268511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1269511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1270511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1270511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1271511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1272511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1273511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1273511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1274511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1275511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1276511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1276511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1277511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1278511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1279511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1279511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1280511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1281511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1282511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1282511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1283511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1284511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1285511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1285511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1286511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1287511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1288511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1288511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1289511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1290511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1291511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1291511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1292511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1293511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1294511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1294511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1295511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1296511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1297511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1297511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1298511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1299511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1300511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1300511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1301511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1302511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1303511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1303511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1304511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1305511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1306511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1306511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1307511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1308511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1309511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1309511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1310511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1311511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1312511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1312511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1313511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1314511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1315511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1315511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1316511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1317511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1318511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1318511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1319511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1320511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1321511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1321511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1322511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1323511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1324511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1324511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1325511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1326511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1327511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1327511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1328511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1329511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1330511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1330511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1331511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1332511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1333511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1333511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1334511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1335511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1336511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1336511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1337511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1338511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1339511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1339511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1340511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1341511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1342511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1342511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1343511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1344511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1345511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1345511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1346511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1347511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1348511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1348511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1349511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1350511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1351511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1351511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1352511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1353511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1354511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1354511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1355511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1356511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1357511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1357511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1358511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1359511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1360511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1360511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1361511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1362511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1363511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1363511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1364511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1365511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1366511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1366511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1367511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1368511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1369511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1369511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1370511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1371511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1372511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1372511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1373511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1374511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1375511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1375511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1376511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1377511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1378511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1378511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1379511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1380511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1381511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1381511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1382511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1383511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1384511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1384511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1385511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1386511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1387511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1387511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1388511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1389511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1390511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1390511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1391511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1392511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1393511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1393511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1394511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1395511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1396511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1396511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1397511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1398511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1399511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1399511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1400511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1401511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1402511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1402511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1403511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1404511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1405511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1405511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1406511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1407511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1408511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1408511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1409511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1410511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1411511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1411511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1412511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1413511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1414511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1414511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1415511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1416511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1417511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1417511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1418511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1419511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1420511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1420511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1421511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1422511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1423511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1423511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1424511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1425511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1426511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1426511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1427511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1428511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1429511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1429511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1430511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1431511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1432511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1432511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1433511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1434511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1435511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1435511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1436511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1437511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1438511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1438511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1439511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1440511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1441511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1441511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1442511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1443511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1444511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1444511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1445511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1446511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1447511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1447511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1448511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1449511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1450511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1450511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1451511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1452511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1453511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1453511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1454511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1455511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1456511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1456511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1457511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1458511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1459511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1459511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1460511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1461511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1462511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1462511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1463511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1464511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1465511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1465511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1466511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1467511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1468511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1468511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1469511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1470511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1471511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1471511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1472511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1473511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1474511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1474511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1475511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1476511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1477511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1477511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1478511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1479511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1480511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1480511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1481511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1482511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1483511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1483511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1484511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1485511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1486511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1486511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1487511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1488511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1489511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1489511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1490511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1491511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1492511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1492511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1493511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1494511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1495511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1495511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1496511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1497511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1498511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1498511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1499511) ESP-NOW: Broadcast packet sent successfully.[0m
+10
+[0;32mI (1500511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;32mI (1501511) ESP-NOW: Broadcast packet sent successfully.[0m
+[0;33mW (1501511) ESP-NOW: WAITING FOR CONNECTION TO BE ESTABLISHED...[0m
+[0;32mI (1502511) ESP-NOW: Broadcast packet sent successfully.[0m

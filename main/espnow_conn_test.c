@@ -25,7 +25,7 @@
 
 #define BROADCAST_MAC   { 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF }
 
-EventGroupHandle_t STATUS_REG; 
+EventGroupHandle_t STATUS_REG;  
 
 TaskHandle_t vTask_register_mac_hdl;
 TaskHandle_t vTask_pairing_hdl; 
@@ -42,6 +42,10 @@ typedef struct {
 	uint8_t data;
 } esp_now_data_packet_t; 
 
+
+
+
+
 // takes the MAC Addr and sends it to task register. 
 void esp_now_recv_cb(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, int len) {
 	
@@ -50,12 +54,16 @@ void esp_now_recv_cb(const esp_now_recv_info_t *esp_now_info, const uint8_t *dat
 	}
 	
 	// send mac to the mac register task. 
-	uint8_t mac[ESP_NOW_ETH_ALEN] = {0};
-	memcpy(&mac, esp_now_info->src_addr, ESP_NOW_ETH_ALEN);
+    uint8_t mac[ESP_NOW_ETH_ALEN] = {0};
+    memcpy(mac, esp_now_info->src_addr, ESP_NOW_ETH_ALEN);
 
 	xQueueOverwriteFromISR(queue_esp_now_recv, mac, pdFALSE);   
 		
 } 
+
+
+
+
 
 
 
@@ -70,6 +78,7 @@ void vTask_start_esp_now(void *pvParameters) {
 	ESP_ERROR_CHECK(esp_wifi_init(&cfg));
 	ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
 	ESP_ERROR_CHECK(esp_wifi_start());
+    ESP_ERROR_CHECK(esp_wifi_set_channel(1, WIFI_SECOND_CHAN_NONE));
 	esp_err_t init = esp_now_init();
     esp_err_t err = esp_now_register_recv_cb(esp_now_recv_cb); 
     
@@ -93,6 +102,9 @@ void vTask_start_esp_now(void *pvParameters) {
 
 
 
+
+
+
 // queue_esp_now_recv den gelen mac adreslerini peer olarak ekliyor. 
 void vTask_register_mac (void *args) {
 	uint8_t mac[ESP_NOW_ETH_ALEN] = {0}; 
@@ -101,10 +113,15 @@ void vTask_register_mac (void *args) {
     newPeer.channel = 0;
 	newPeer.encrypt	= false;
 	
-	ulTaskNotifyTake(pdTRUE, portMAX_DELAY); 
+	ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+    
+    ESP_LOGW(TAG_ESP_NOW, "vTask_register_mac IS TRIGGERRED...");
+
     for (;;) {
 
         if (xQueueReceive(queue_esp_now_recv, mac, portMAX_DELAY) == pdPASS) {
+            
+            ESP_LOGI(TAG_ESP_NOW, "queue_esp_now_recv TRIGGERED...");
 
             esp_err_t err = esp_now_add_peer(&newPeer);
 
@@ -113,19 +130,26 @@ void vTask_register_mac (void *args) {
                 ESP_LOGW(TAG_ESP_NOW, "A new global address has been added: %02X %02X %02X %02X %02X %02X", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
                 xEventGroupSetBits(STATUS_REG, STATUS_ESP_NOW_CONN);
                 memcpy(mac, global_peer_addr, ESP_NOW_ETH_ALEN);
-                xTaskNotifyGive(vTask_pairing_hdl);	
+                xTaskNotifyGive(vTask_send_data_hdl);	
+                return; // exit the task after registering the first mac address.
                 
             } else if (err == ESP_ERR_ESPNOW_EXIST) {
                 ESP_LOGE(TAG_ESP_NOW, "This peer already exists: %02X %02X %02X %02X %02X %02X", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
-		    } else {
-			    ESP_LOGE(TAG_ESP_NOW, "An error occured while adding the a new peer..");
-		    }
+            } else {
+                ESP_LOGE(TAG_ESP_NOW, "An error occured while adding a new peer: %s", esp_err_to_name(err));
+            }
 	    }
 
-	vTaskDelete(NULL); 
-
+        vTaskDelay(pdMS_TO_TICKS(100));
     }	 
+    
+    ESP_LOGW(TAG_ESP_NOW, "vTask_register_mac IS EXITING...");
+
+    vTaskDelete(NULL); 
 }
+
+
+
 
 
 
@@ -152,22 +176,28 @@ void vTask_pairing(void *pvParameters) {
     broadcast_pkt.data = 0; 
 
 	for (;;) {
-
-        ESP_LOGI(TAG_ESP_NOW, "SENDING BROADCAST!");
+        
 		esp_err_t err = esp_now_send(broadcast_addr, (const uint8_t *)&broadcast_pkt, sizeof(broadcast_pkt));
 
-        if (err != ESP_OK) ESP_LOGE(TAG_ESP_NOW, "Send error: %s", esp_err_to_name(err));
-			
+        if (err == ESP_OK) { 
+            ESP_LOGI(TAG_ESP_NOW, "Broadcast packet sent successfully.");
+        } else {
+            ESP_LOGE(TAG_ESP_NOW, "Send error: %s", esp_err_to_name(err));
+        }
+		
 		if (xEventGroupGetBits(STATUS_REG) & STATUS_ESP_NOW_CONN) { 
             ESP_LOGW(TAG_ESP_NOW, "EXITING PAIRING PROCESS..."); 
             break;
         }  
 			
-		vTaskDelay(pdMS_TO_TICKS(500));	
+		vTaskDelay(pdMS_TO_TICKS(1000));	
 	}		
 
 	vTaskDelete(NULL); 
 }
+
+
+
 
 
 // queue_esp_now dan paketleri alip global_peer_addr ye yollar. 
@@ -186,6 +216,7 @@ void vTask_esp_now_send_data(void *args) {
         
         if (memcmp(global_peer_addr, "\0\0\0\0\0\0", ESP_NOW_ETH_ALEN) == 0) {
             ESP_LOGE(TAG_ESP_NOW, "Global_peer_addr is EMPTY"); 
+            vTaskDelay(pdMS_TO_TICKS(200));
             continue;
         }
 
@@ -198,6 +229,8 @@ void vTask_esp_now_send_data(void *args) {
 
         if (err == ESP_OK) {
             ESP_LOGW(TAG_ESP_NOW, "DATA HAS BEEN TRANSMITTED SUCCESSFULLY...");
+        } else {
+            ESP_LOGE(TAG_ESP_NOW, "ERROR SENDING DATA: %s", esp_err_to_name(err));
         }
 
         vTaskDelay(pdMS_TO_TICKS(200));
@@ -205,6 +238,30 @@ void vTask_esp_now_send_data(void *args) {
 }
 
 
+// Prints event group bits
+void vTask_display_registers(void *args) {
+	
+	uint32_t statusBits = xEventGroupGetBits(STATUS_REG);
+
+	for (;;) {
+		
+		statusBits = xEventGroupGetBits(STATUS_REG);
+				
+		for (int i = 0; i < 2; i++) {
+			if (statusBits & (1 << i)) {
+				printf("%i", 1);
+				fflush(stdout); 
+			} else {
+				printf("%i", 0);
+				fflush(stdout);
+			}
+		}
+
+		printf("\n");
+		fflush(stdout);	
+		vTaskDelay(pdMS_TO_TICKS(3000));	
+	}
+}
 
 
 void app_main(void)
@@ -215,21 +272,29 @@ void app_main(void)
 
     printf("Start of main\n"); 
     xTaskCreate(vTask_start_esp_now, "ESP-NOW Start", 4096, NULL, 1, NULL);
+    xTaskCreate(vTask_display_registers, "Display Registers", 2048, NULL, 1, NULL);
     
     while ((xEventGroupGetBits(STATUS_REG) & STATUS_ESP_NOW) == 0) {
-        ESP_LOGW(TAG_ESP_NOW, "WAITING FOR ESP-NOW TO START...");
+        ESP_LOGW(TAG_ESP_NOW, "WAITING FOR ESP-NOW TO START");
         vTaskDelay(pdMS_TO_TICKS(500)); 
     }
 
-    ESP_LOGW(TAG_ESP_NOW, "STARTING PAIRING MODE AND REGISTER MAC TASK...");
+    ESP_LOGW(TAG_ESP_NOW, "STARTING PAIRING MODE AND REGISTER MAC TASK");
     xTaskCreate(vTask_pairing, "Pairing", 4096, NULL, 1, &vTask_pairing_hdl);
     xTaskCreate(vTask_register_mac, "Register MAC", 4096, NULL, 1, &vTask_register_mac_hdl);
     vTaskDelay(pdMS_TO_TICKS(500));
     xTaskNotifyGive(vTask_pairing_hdl);
     xTaskNotifyGive(vTask_register_mac_hdl);
 
+    uint8_t counter = 0;
     while ((xEventGroupGetBits(STATUS_REG) & STATUS_ESP_NOW_CONN) == 0) {
-        ESP_LOGW(TAG_ESP_NOW, "WAITING CONNECTION TO BE ESTABLISHED...");
+
+        if (counter > 5) {
+            ESP_LOGW(TAG_ESP_NOW, "WAITING FOR CONNECTION TO BE ESTABLISHED...");
+            counter = 0;
+        }
+
+        counter++;
         vTaskDelay(pdMS_TO_TICKS(500)); 
     }
 

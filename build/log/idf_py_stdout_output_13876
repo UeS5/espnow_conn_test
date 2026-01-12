@@ -1,0 +1,18 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Espressif\workspace\espnow_conn_test\build\bootloader && D:\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe D:/Espressif/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Espressif/workspace/espnow_conn_test/build/bootloader/bootloader.bin"
+Bootloader binary size 0x66b0 bytes. 0x950 bytes (8%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/espnow_conn_test.c.obj
+[5/9] Linking C static library esp-idf\main\libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+[7/9] Linking CXX executable espnow_conn_test.elf
+[8/9] Generating binary image from built executable
+esptool v5.2.dev1
+Creating ESP32 image...
+Merged 2 ELF sections.
+Successfully created ESP32 image.
+Generated D:/Espressif/workspace/espnow_conn_test/build/espnow_conn_test.bin
+[9/9] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Espressif\workspace\espnow_conn_test\build && D:\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe D:/Espressif/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/Espressif/workspace/espnow_conn_test/build/partition_table/partition-table.bin D:/Espressif/workspace/espnow_conn_test/build/espnow_conn_test.bin"
+espnow_conn_test.bin binary size 0xb1520 bytes. Smallest app partition is 0x100000 bytes. 0x4eae0 bytes (31%) free.
