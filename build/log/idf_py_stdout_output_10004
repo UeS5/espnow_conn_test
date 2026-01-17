@@ -1,0 +1,696 @@
+Command: D:\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe D:\Espressif\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\Espressif\workspace\espnow_conn_test\build\espnow_conn_test.elf D:\Espressif\workspace\espnow_conn_test\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe' 'D:\Espressif\esp-idf\tools\idf.py'
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xe�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.1-dev-786-g130fdc7ce7 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 11 2026 13:38:55[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17ca4h ( 97444) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00027ccc vaddr=3ffb0000 size=04124h ( 16676) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002bdf8 vaddr=40080000 size=04220h ( 16928) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=80440h (525376) map[0m
+[0;32mI (326) esp_image: segment 4: paddr=000b0468 vaddr=40084220 size=11218h ( 70168) load[0m
+[0;32mI (354) esp_image: segment 5: paddr=000c1688 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (365) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (365) boot: Disabling RNG early entropy source...[0m
+[0;32mI (376) cpu_start: Multicore app[0m
+[0;32mI (384) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (384) cpu_start: Pro cpu start user code[0m
+[0;32mI (384) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (386) app_init: Application information:[0m
+[0;32mI (390) app_init: Project name:     espnow_conn_test[0m
+[0;32mI (395) app_init: App version:      1[0m
+[0;32mI (398) app_init: Compile time:     Jan 11 2026 13:34:59[0m
+[0;32mI (403) app_init: ELF file SHA256:  ee6cb7fc1...[0m
+[0;32mI (408) app_init: ESP-IDF:          v6.1-dev-786-g130fdc7ce7[0m
+[0;32mI (413) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (417) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (421) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (425) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (431) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (436) heap_init: At 3FFB8548 len 00027AB8 (158 KiB): DRAM[0m
+[0;32mI (441) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (447) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (452) heap_init: At 40095438 len 0000ABC8 (42 KiB): IRAM[0m
+[0;33mW (459) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (470) spi_flash: detected chip: generic[0m
+[0;32mI (474) spi_flash: flash io: dio[0m
+[0;33mW (477) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (491) main_task: Started on CPU0[0m
+[0;32mI (501) main_task: Calling app_main()[0m
+Start of main
+[0;33mW (501) ESP-NOW: STARTING ESP-NOW...[0m
+[0;33mW (511) ESP-NOW: WAITING FOR ESP-NOW TO START[0m
+00
+[0;32mI (521) wifi:wifi driver task: 3ffc1b28, prio:23, stack:6656, core=0[0m
+[0;32mI (521) wifi:wifi firmware version: 6a8253a[0m
+[0;32mI (521) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (521) wifi:config nano formatting: disabled[0m
+[0;32mI (531) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (531) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (541) wifi:Init management short buffer num: 32[0m
+[0;32mI (541) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (551) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (551) wifi:Init static rx buffer num: 10[0m
+[0;32mI (551) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (561) wifi_init: rx ba win: 6[0m
+[0;32mI (561) wifi_init: accept mbox: 6[0m
+[0;32mI (561) wifi_init: tcpip mbox: 32[0m
+[0;32mI (571) wifi_init: udp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp tx win: 5760[0m
+[0;32mI (581) wifi_init: tcp rx win: 5760[0m
+[0;32mI (581) wifi_init: tcp mss: 1440[0m
+[0;32mI (581) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (581) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (591) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (681) wifi:mode : sta (78:1c:3c:f6:d6:cc)[0m
+[0;32mI (681) wifi:enable tsf[0m
+[0;32mI (681) ESPNOW: espnow [version: 2.0] init[0m
+[0;33mW (741) ESP-NOW: ESP-NOW INITIATED SUCCESSFULLY...[0m
+[0;33mW (1011) ESP-NOW: STARTING PAIRING MODE AND REGISTER MAC TASK[0m
+[0;32mI (1511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (2511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (1011) ESP-NOW: STARTING PAIRING MODE AND REGISTER MAC TASK[0m
+[0;32mI (1511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (2511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (3511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (4511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (4511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (5511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (6511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (7511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (7511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (8511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (9511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (10511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (10511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (11511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (12511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (13511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (13511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (14511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (15511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (16511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (16511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (17511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (18511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (19511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (19511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (20511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (21511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (22511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (22511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (23511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (24511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (25511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (25511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (26511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (27511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (28511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (28511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (29511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (30511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (31511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (31511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (32511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (33511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (34511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (34511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (35511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (36511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (37511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (37511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (38511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (39511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (40511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (40511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (41511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (42511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (43511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (43511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (44511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (45511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (46511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (46511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (47511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (48511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (49511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (49511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (50511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (51511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (52511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (52511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (53511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (54511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (55511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (55511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (56511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (57511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (58511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (58511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (59511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (60511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (61511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (61511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (62511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (63511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (64511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (64511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (65511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (66511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (67511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (67511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (68511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (69511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (70511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (70511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (71511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (72511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (73511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (73511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (74511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (75511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (76511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (76511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (77511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (78511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (79511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (79511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (80511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (81511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (82511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (82511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (83511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (84511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (85511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (85511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (86511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (87511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (88511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (88511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (89511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (90511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (91511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (91511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (92511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (93511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (94511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (94511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (95511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (96511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (97511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (97511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (98511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (99511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (100511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (100511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (101511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (102511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (103511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (103511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (104511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (105511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (106511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (106511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (107511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (108511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (109511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (109511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (110511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (111511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (112511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (112511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (113511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (114511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (115511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (115511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (116511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (117511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (118511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (118511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (119511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (120511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (121511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (121511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (122511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (123511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (124511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (124511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (125511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (126511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (127511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (127511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (128511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (129511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (130511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (130511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (131511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (132511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (133511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (133511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (134511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (135511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (136511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (136511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (137511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (138511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (139511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (139511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (140511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (141511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (142511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (142511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (143511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (144511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (145511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (145511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (146511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (147511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (148511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (148511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (149511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (150511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (151511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (151511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (152511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (153511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (154511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (154511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (155511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (156511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (157511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (157511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (158511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (159511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (160511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (160511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (161511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (162511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (163511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (163511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (164511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (165511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (166511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (166511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (167511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (168511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (169511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (169511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (170511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (171511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (172511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (172511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (173511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (174511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (175511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (175511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (176511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (177511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (178511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (178511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (179511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (180511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (181511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (181511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (182511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (183511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (184511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (184511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (185511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (186511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (187511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (187511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (188511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (189511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (190511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (190511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (191511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (192511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (193511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (193511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (194511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (195511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (196511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (196511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (197511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (198511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (199511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (199511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (200511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (201511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (202511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (202511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (203511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (204511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (205511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (205511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (206511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (207511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (208511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (208511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (209511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (210511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (211511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (211511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (212511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (213511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (214511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (214511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (215511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (216511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (217511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (217511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (218511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (219511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (220511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (220511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (221511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (222511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (223511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (223511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (224511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (225511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (226511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (226511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (227511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (228511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (229511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (229511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (230511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (231511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (232511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (232511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (233511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (234511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (235511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (235511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (236511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (237511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (238511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (238511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (239511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (240511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (241511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (241511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (242511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (243511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (244511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (244511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (245511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (246511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (247511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (247511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (248511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (249511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (250511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (250511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (251511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (252511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (253511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (253511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (254511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (255511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (256511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (256511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (257511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (258511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (259511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (259511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (260511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (261511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (262511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (262511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (263511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (264511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (265511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (265511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (266511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (267511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (268511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (268511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (269511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (270511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (271511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (271511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (272511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (273511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (274511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (274511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (275511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (276511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (277511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (277511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (278511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (279511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (280511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (280511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (281511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (282511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (283511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (283511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (284511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (285511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (286511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (286511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (287511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (288511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (289511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (289511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (290511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (291511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (292511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (292511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (293511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (294511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (295511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (295511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (296511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (297511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (298511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (298511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (299511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (300511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (301511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (301511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (302511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (303511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (304511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (304511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (305511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (306511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (307511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (307511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (308511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (309511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (310511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (310511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (311511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (312511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (313511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (313511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (314511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (315511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (316511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (316511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (317511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (318511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (319511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (319511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (320511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (321511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (322511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (322511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (323511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (324511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (325511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (325511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (326511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (327511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (328511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (328511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (329511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (330511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (331511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (331511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (332511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (333511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (334511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (334511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (335511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (336511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (337511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (337511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (338511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (339511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (340511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (340511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (341511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (342511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (343511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (343511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (344511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (345511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (346511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (346511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (347511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (348511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (349511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (349511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (350511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (351511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (352511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (352511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (353511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (354511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (355511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (355511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (356511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (357511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (358511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (358511) ESP-NOW: Waiting for ACK signal[0m
+[0;32mI (359511) PAIRING: Broadcast packet sent successfully.[0m
+10
+[0;32mI (360511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (361511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (361511) ESP-NOW: Waiting for ACK signal[0m

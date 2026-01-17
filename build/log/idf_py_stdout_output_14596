@@ -1,0 +1,1091 @@
+Command: D:\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe D:\Espressif\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\Espressif\workspace\espnow_conn_test\build\espnow_conn_test.elf D:\Espressif\workspace\espnow_conn_test\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe' 'D:\Espressif\esp-idf\tools\idf.py'
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xe�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.1-dev-786-g130fdc7ce7 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 11 2026 13:38:55[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17e54h ( 97876) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00027e7c vaddr=3ffb0000 size=04124h ( 16676) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002bfa8 vaddr=40080000 size=04070h ( 16496) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=80584h (525700) map[0m
+[0;32mI (326) esp_image: segment 4: paddr=000b05ac vaddr=40084070 size=113c8h ( 70600) load[0m
+[0;32mI (355) esp_image: segment 5: paddr=000c197c vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (366) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (366) boot: Disabling RNG early entropy source...[0m
+[0;32mI (376) cpu_start: Multicore app[0m
+[0;32mI (384) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (385) cpu_start: Pro cpu start user code[0m
+[0;32mI (385) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (387) app_init: Application information:[0m
+[0;32mI (390) app_init: Project name:     espnow_conn_test[0m
+[0;32mI (395) app_init: App version:      1[0m
+[0;32mI (398) app_init: Compile time:     Jan 11 2026 13:34:59[0m
+[0;32mI (403) app_init: ELF file SHA256:  f6bbadb13...[0m
+[0;32mI (408) app_init: ESP-IDF:          v6.1-dev-786-g130fdc7ce7[0m
+[0;32mI (413) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (417) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (421) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (425) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (431) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (436) heap_init: At 3FFB8550 len 00027AB0 (158 KiB): DRAM[0m
+[0;32mI (441) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (447) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (452) heap_init: At 40095438 len 0000ABC8 (42 KiB): IRAM[0m
+[0;33mW (459) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (471) spi_flash: detected chip: generic[0m
+[0;32mI (474) spi_flash: flash io: dio[0m
+[0;33mW (477) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (491) main_task: Started on CPU0[0m
+[0;32mI (501) main_task: Calling app_main()[0m
+Start of main
+[0;33mW (501) ESP-NOW: STARTING ESP-NOW...[0m
+[0;33mW (511) ESP-NOW: WAITING FOR ESP-NOW TO START[0m
+00
+[0;32mI (521) wifi:wifi driver task: 3ffc1bb0, prio:23, stack:6656, core=0[0m
+[0;32mI (521) wifi:wifi firmware version: 6a8253a[0m
+[0;32mI (521) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (521) wifi:config nano formatting: disabled[0m
+[0;32mI (531) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (531) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (541) wifi:Init management short buffer num: 32[0m
+[0;32mI (541) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (551) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (551) wifi:Init static rx buffer num: 10[0m
+[0;32mI (551) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (561) wifi_init: rx ba win: 6[0m
+[0;32mI (561) wifi_init: accept mbox: 6[0m
+[0;32mI (561) wifi_init: tcpip mbox: 32[0m
+[0;32mI (571) wifi_init: udp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp tx win: 5760[0m
+[0;32mI (581) wifi_init: tcp rx win: 5760[0m
+[0;32mI (581) wifi_init: tcp mss: 1440[0m
+[0;32mI (581) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (581) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (591) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (681) wifi:mode : sta (78:1c:3c:f6:d6:cc)[0m
+[0;32mI (681) wifi:enable tsf[0m
+[0;32mI (691) ESPNOW: espnow [version: 2.0] init[0m
+[0;33mW (741) ESP-NOW: >> Info: ESP-NOW initiated successfully![0m
+[0;33mW (1011) ESP-NOW: STARTING PAIRING MODE AND REGISTER MAC TASK[0m
+[0;32mI (1011) RECEIVE: >> Info: Receive task has been started.[0m
+[0;32mI (1511) PAIRING: Broadcast packet sent successfully.[0m
+[0;33mW (1511) RECEIVE: >> Info: New ACK packet received. Sending this mac to register task.[0m
+[0;32mI (2511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (2511) REGISTER MAC: >> Data in register mac task.[0m
+[0;33mW (2511) REGISTER MAC: >> Info: A new global address has been added: DC B4 D9 8D 36 70[0m
+[0;32mI (3011) MAIN: >> Info: Received ACK signal. Stating vTask_esp_now_send_data.[0m
+11
+[0;32mI (3511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (3511) main_task: Returned from app_main()[0m
+[0;33mW (3511) PAIRING: EXITING PAIRING PROCESS...[0m
+[0;32mI (3511) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (3511) SEND DATA: vTask_esp_now_send_data is triggerred![0m
+[0;33mW (3521) SEND DATA: >> Data sent: 197[0m
+[0;32mI (3521) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (3681) SEND DATA: >> Data sent: 5[0m
+[0;32mI (3681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (3831) SEND DATA: >> Data sent: 25[0m
+[0;32mI (3831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (3981) SEND DATA: >> Data sent: 131[0m
+[0;32mI (3981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (4131) SEND DATA: >> Data sent: 227[0m
+[0;32mI (4131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (4281) SEND DATA: >> Data sent: 199[0m
+[0;32mI (4281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (4431) SEND DATA: >> Data sent: 88[0m
+[0;32mI (4431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (4581) SEND DATA: >> Data sent: 105[0m
+[0;32mI (4581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (4731) SEND DATA: >> Data sent: 216[0m
+[0;32mI (4731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (4881) SEND DATA: >> Data sent: 100[0m
+[0;32mI (4881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (5031) SEND DATA: >> Data sent: 143[0m
+[0;32mI (5031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (5181) SEND DATA: >> Data sent: 245[0m
+[0;32mI (5181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (5331) SEND DATA: >> Data sent: 237[0m
+[0;32mI (5331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (5481) SEND DATA: >> Data sent: 132[0m
+[0;32mI (5481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (5631) SEND DATA: >> Data sent: 177[0m
+[0;32mI (5631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (5781) SEND DATA: >> Data sent: 236[0m
+[0;32mI (5781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (5931) SEND DATA: >> Data sent: 123[0m
+[0;32mI (5931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (6081) SEND DATA: >> Data sent: 94[0m
+[0;32mI (6081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (6231) SEND DATA: >> Data sent: 11[0m
+[0;32mI (6231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (6381) SEND DATA: >> Data sent: 225[0m
+[0;32mI (6381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (6531) SEND DATA: >> Data sent: 203[0m
+[0;32mI (6531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (6681) SEND DATA: >> Data sent: 197[0m
+[0;32mI (6681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (6831) SEND DATA: >> Data sent: 186[0m
+[0;32mI (6831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (6981) SEND DATA: >> Data sent: 28[0m
+[0;32mI (6981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (7131) SEND DATA: >> Data sent: 30[0m
+[0;32mI (7131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (7281) SEND DATA: >> Data sent: 169[0m
+[0;32mI (7281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (7431) SEND DATA: >> Data sent: 74[0m
+[0;32mI (7431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (7581) SEND DATA: >> Data sent: 106[0m
+[0;32mI (7581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (7731) SEND DATA: >> Data sent: 147[0m
+[0;32mI (7731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (7881) SEND DATA: >> Data sent: 42[0m
+[0;32mI (7881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (8031) SEND DATA: >> Data sent: 82[0m
+[0;32mI (8031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (8181) SEND DATA: >> Data sent: 4[0m
+[0;32mI (8181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (8331) SEND DATA: >> Data sent: 10[0m
+[0;32mI (8331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (8481) SEND DATA: >> Data sent: 99[0m
+[0;32mI (8481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (8631) SEND DATA: >> Data sent: 65[0m
+[0;32mI (8631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (8781) SEND DATA: >> Data sent: 207[0m
+[0;32mI (8781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (8931) SEND DATA: >> Data sent: 117[0m
+[0;32mI (8931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (9081) SEND DATA: >> Data sent: 190[0m
+[0;32mI (9081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (9231) SEND DATA: >> Data sent: 13[0m
+[0;32mI (9231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (9381) SEND DATA: >> Data sent: 170[0m
+[0;32mI (9381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (9531) SEND DATA: >> Data sent: 183[0m
+[0;32mI (9531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (9681) SEND DATA: >> Data sent: 99[0m
+[0;32mI (9681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (9831) SEND DATA: >> Data sent: 216[0m
+[0;32mI (9831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (9981) SEND DATA: >> Data sent: 183[0m
+[0;32mI (9981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (10131) SEND DATA: >> Data sent: 40[0m
+[0;32mI (10131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (10281) SEND DATA: >> Data sent: 36[0m
+[0;32mI (10281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (10431) SEND DATA: >> Data sent: 34[0m
+[0;32mI (10431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (10581) SEND DATA: >> Data sent: 181[0m
+[0;32mI (10581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (10731) SEND DATA: >> Data sent: 105[0m
+[0;32mI (10751) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (10881) SEND DATA: >> Data sent: 24[0m
+[0;32mI (10881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (11031) SEND DATA: >> Data sent: 176[0m
+[0;32mI (11031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (11181) SEND DATA: >> Data sent: 226[0m
+[0;32mI (11181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (11331) SEND DATA: >> Data sent: 235[0m
+[0;32mI (11331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (11481) SEND DATA: >> Data sent: 22[0m
+[0;32mI (11481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (11631) SEND DATA: >> Data sent: 13[0m
+[0;32mI (11631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (11781) SEND DATA: >> Data sent: 110[0m
+[0;32mI (11781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (11931) SEND DATA: >> Data sent: 209[0m
+[0;32mI (11931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (12081) SEND DATA: >> Data sent: 3[0m
+[0;32mI (12081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (12231) SEND DATA: >> Data sent: 245[0m
+[0;32mI (12231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (12381) SEND DATA: >> Data sent: 41[0m
+[0;32mI (12381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (12531) SEND DATA: >> Data sent: 72[0m
+[0;32mI (12531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (12681) SEND DATA: >> Data sent: 170[0m
+[0;32mI (12681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (12831) SEND DATA: >> Data sent: 127[0m
+[0;32mI (12831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (12981) SEND DATA: >> Data sent: 99[0m
+[0;32mI (12981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (13131) SEND DATA: >> Data sent: 239[0m
+[0;32mI (13131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (13281) SEND DATA: >> Data sent: 27[0m
+[0;32mI (13281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (13431) SEND DATA: >> Data sent: 74[0m
+[0;32mI (13431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (13581) SEND DATA: >> Data sent: 93[0m
+[0;32mI (13581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (13731) SEND DATA: >> Data sent: 44[0m
+[0;32mI (13731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (13881) SEND DATA: >> Data sent: 40[0m
+[0;32mI (13881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (14031) SEND DATA: >> Data sent: 87[0m
+[0;32mI (14031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (14181) SEND DATA: >> Data sent: 182[0m
+[0;32mI (14181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (14331) SEND DATA: >> Data sent: 87[0m
+[0;32mI (14331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (14481) SEND DATA: >> Data sent: 148[0m
+[0;32mI (14481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (14631) SEND DATA: >> Data sent: 217[0m
+[0;32mI (14631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (14781) SEND DATA: >> Data sent: 240[0m
+[0;32mI (14781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (14931) SEND DATA: >> Data sent: 245[0m
+[0;32mI (14931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (15081) SEND DATA: >> Data sent: 224[0m
+[0;32mI (15081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (15231) SEND DATA: >> Data sent: 140[0m
+[0;32mI (15231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (15381) SEND DATA: >> Data sent: 124[0m
+[0;32mI (15381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (15531) SEND DATA: >> Data sent: 229[0m
+[0;32mI (15531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (15681) SEND DATA: >> Data sent: 24[0m
+[0;32mI (15681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (15831) SEND DATA: >> Data sent: 101[0m
+[0;32mI (15831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (15981) SEND DATA: >> Data sent: 19[0m
+[0;32mI (15981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (16131) SEND DATA: >> Data sent: 148[0m
+[0;32mI (16131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (16281) SEND DATA: >> Data sent: 188[0m
+[0;32mI (16281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (16431) SEND DATA: >> Data sent: 64[0m
+[0;32mI (16431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (16581) SEND DATA: >> Data sent: 40[0m
+[0;32mI (16581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (16731) SEND DATA: >> Data sent: 229[0m
+[0;32mI (16731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (16881) SEND DATA: >> Data sent: 249[0m
+[0;32mI (16881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (17031) SEND DATA: >> Data sent: 246[0m
+[0;32mI (17031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (17181) SEND DATA: >> Data sent: 193[0m
+[0;32mI (17181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (17331) SEND DATA: >> Data sent: 93[0m
+[0;32mI (17331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (17481) SEND DATA: >> Data sent: 127[0m
+[0;32mI (17481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (17631) SEND DATA: >> Data sent: 230[0m
+[0;32mI (17631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (17781) SEND DATA: >> Data sent: 102[0m
+[0;32mI (17781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (17931) SEND DATA: >> Data sent: 254[0m
+[0;32mI (17931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (18081) SEND DATA: >> Data sent: 205[0m
+[0;32mI (18081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (18231) SEND DATA: >> Data sent: 87[0m
+[0;32mI (18231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (18381) SEND DATA: >> Data sent: 195[0m
+[0;32mI (18381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (18531) SEND DATA: >> Data sent: 78[0m
+[0;32mI (18531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (18681) SEND DATA: >> Data sent: 137[0m
+[0;32mI (18681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (18831) SEND DATA: >> Data sent: 245[0m
+[0;32mI (18831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (18981) SEND DATA: >> Data sent: 135[0m
+[0;32mI (18981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (19131) SEND DATA: >> Data sent: 89[0m
+[0;32mI (19131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (19281) SEND DATA: >> Data sent: 83[0m
+[0;32mI (19281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (19431) SEND DATA: >> Data sent: 253[0m
+[0;32mI (19431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (19581) SEND DATA: >> Data sent: 210[0m
+[0;32mI (19581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (19731) SEND DATA: >> Data sent: 220[0m
+[0;32mI (19731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (19881) SEND DATA: >> Data sent: 148[0m
+[0;32mI (19881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (20031) SEND DATA: >> Data sent: 11[0m
+[0;32mI (20031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (20181) SEND DATA: >> Data sent: 25[0m
+[0;32mI (20181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (20331) SEND DATA: >> Data sent: 178[0m
+[0;32mI (20331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (20481) SEND DATA: >> Data sent: 190[0m
+[0;32mI (20481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (20631) SEND DATA: >> Data sent: 43[0m
+[0;32mI (20631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (20781) SEND DATA: >> Data sent: 17[0m
+[0;32mI (20781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (20931) SEND DATA: >> Data sent: 211[0m
+[0;32mI (20931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (21081) SEND DATA: >> Data sent: 133[0m
+[0;32mI (21081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (21231) SEND DATA: >> Data sent: 157[0m
+[0;32mI (21231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (21381) SEND DATA: >> Data sent: 253[0m
+[0;32mI (21381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (21531) SEND DATA: >> Data sent: 136[0m
+[0;32mI (21531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (21681) SEND DATA: >> Data sent: 41[0m
+[0;32mI (21681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (21831) SEND DATA: >> Data sent: 239[0m
+[0;32mI (21831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (21981) SEND DATA: >> Data sent: 80[0m
+[0;32mI (21981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (22131) SEND DATA: >> Data sent: 92[0m
+[0;32mI (22131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (22281) SEND DATA: >> Data sent: 160[0m
+[0;32mI (22281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (22431) SEND DATA: >> Data sent: 198[0m
+[0;32mI (22431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (22581) SEND DATA: >> Data sent: 92[0m
+[0;32mI (22581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (22731) SEND DATA: >> Data sent: 146[0m
+[0;32mI (22731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (22881) SEND DATA: >> Data sent: 172[0m
+[0;32mI (22881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (23031) SEND DATA: >> Data sent: 216[0m
+[0;32mI (23031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (23181) SEND DATA: >> Data sent: 8[0m
+[0;32mI (23181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (23331) SEND DATA: >> Data sent: 132[0m
+[0;32mI (23331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (23481) SEND DATA: >> Data sent: 54[0m
+[0;32mI (23481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (23631) SEND DATA: >> Data sent: 63[0m
+[0;32mI (23631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (23781) SEND DATA: >> Data sent: 37[0m
+[0;32mI (23781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (23931) SEND DATA: >> Data sent: 222[0m
+[0;32mI (23931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (24081) SEND DATA: >> Data sent: 24[0m
+[0;32mI (24081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (24231) SEND DATA: >> Data sent: 195[0m
+[0;32mI (24231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (24381) SEND DATA: >> Data sent: 249[0m
+[0;32mI (24381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (24531) SEND DATA: >> Data sent: 5[0m
+[0;32mI (24531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (24681) SEND DATA: >> Data sent: 76[0m
+[0;32mI (24681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (24831) SEND DATA: >> Data sent: 34[0m
+[0;32mI (24831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (24981) SEND DATA: >> Data sent: 227[0m
+[0;32mI (24981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (25131) SEND DATA: >> Data sent: 106[0m
+[0;32mI (25131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (25281) SEND DATA: >> Data sent: 131[0m
+[0;32mI (25281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (25431) SEND DATA: >> Data sent: 231[0m
+[0;32mI (25431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (25581) SEND DATA: >> Data sent: 106[0m
+[0;32mI (25581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (25731) SEND DATA: >> Data sent: 50[0m
+[0;32mI (25731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (25881) SEND DATA: >> Data sent: 230[0m
+[0;32mI (25881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (26031) SEND DATA: >> Data sent: 112[0m
+[0;32mI (26031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (26181) SEND DATA: >> Data sent: 37[0m
+[0;32mI (26181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (26331) SEND DATA: >> Data sent: 249[0m
+[0;32mI (26331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (26481) SEND DATA: >> Data sent: 93[0m
+[0;32mI (26481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (26631) SEND DATA: >> Data sent: 115[0m
+[0;32mI (26631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (26781) SEND DATA: >> Data sent: 188[0m
+[0;32mI (26781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (26931) SEND DATA: >> Data sent: 98[0m
+[0;32mI (26931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (27081) SEND DATA: >> Data sent: 193[0m
+[0;32mI (27081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (27231) SEND DATA: >> Data sent: 55[0m
+[0;32mI (27231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (27381) SEND DATA: >> Data sent: 192[0m
+[0;32mI (27381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (27531) SEND DATA: >> Data sent: 231[0m
+[0;32mI (27531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (27681) SEND DATA: >> Data sent: 107[0m
+[0;32mI (27681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (27831) SEND DATA: >> Data sent: 126[0m
+[0;32mI (27831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (27981) SEND DATA: >> Data sent: 83[0m
+[0;32mI (27981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (28131) SEND DATA: >> Data sent: 125[0m
+[0;32mI (28131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (28281) SEND DATA: >> Data sent: 109[0m
+[0;32mI (28281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (28431) SEND DATA: >> Data sent: 24[0m
+[0;32mI (28431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (28581) SEND DATA: >> Data sent: 79[0m
+[0;32mI (28581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (28731) SEND DATA: >> Data sent: 200[0m
+[0;32mI (28731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (28881) SEND DATA: >> Data sent: 198[0m
+[0;32mI (28881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (29031) SEND DATA: >> Data sent: 228[0m
+[0;32mI (29031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (29181) SEND DATA: >> Data sent: 94[0m
+[0;32mI (29181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (29331) SEND DATA: >> Data sent: 235[0m
+[0;32mI (29331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (29481) SEND DATA: >> Data sent: 127[0m
+[0;32mI (29481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (29631) SEND DATA: >> Data sent: 148[0m
+[0;32mI (29631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (29781) SEND DATA: >> Data sent: 30[0m
+[0;32mI (29781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (29931) SEND DATA: >> Data sent: 164[0m
+[0;32mI (29931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (30081) SEND DATA: >> Data sent: 231[0m
+[0;32mI (30081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (30231) SEND DATA: >> Data sent: 15[0m
+[0;32mI (30231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (30381) SEND DATA: >> Data sent: 211[0m
+[0;32mI (30381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (30531) SEND DATA: >> Data sent: 133[0m
+[0;32mI (30531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (30681) SEND DATA: >> Data sent: 202[0m
+[0;32mI (30681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (30831) SEND DATA: >> Data sent: 213[0m
+[0;32mI (30831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (30981) SEND DATA: >> Data sent: 236[0m
+[0;32mI (30981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (31131) SEND DATA: >> Data sent: 242[0m
+[0;32mI (31131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (31281) SEND DATA: >> Data sent: 179[0m
+[0;32mI (31281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (31431) SEND DATA: >> Data sent: 85[0m
+[0;32mI (31431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (31581) SEND DATA: >> Data sent: 55[0m
+[0;32mI (31581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (31731) SEND DATA: >> Data sent: 176[0m
+[0;32mI (31731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (31881) SEND DATA: >> Data sent: 239[0m
+[0;32mI (31881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (32031) SEND DATA: >> Data sent: 40[0m
+[0;32mI (32031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (32181) SEND DATA: >> Data sent: 242[0m
+[0;32mI (32181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (32331) SEND DATA: >> Data sent: 164[0m
+[0;32mI (32331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (32481) SEND DATA: >> Data sent: 37[0m
+[0;32mI (32481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (32631) SEND DATA: >> Data sent: 99[0m
+[0;32mI (32631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (32781) SEND DATA: >> Data sent: 226[0m
+[0;32mI (32781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (32931) SEND DATA: >> Data sent: 125[0m
+[0;32mI (32931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (33081) SEND DATA: >> Data sent: 216[0m
+[0;32mI (33081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (33231) SEND DATA: >> Data sent: 138[0m
+[0;32mI (33231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (33381) SEND DATA: >> Data sent: 208[0m
+[0;32mI (33381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (33531) SEND DATA: >> Data sent: 96[0m
+[0;32mI (33531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (33681) SEND DATA: >> Data sent: 58[0m
+[0;32mI (33681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (33831) SEND DATA: >> Data sent: 157[0m
+[0;32mI (33841) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (33981) SEND DATA: >> Data sent: 24[0m
+[0;32mI (33981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (34131) SEND DATA: >> Data sent: 55[0m
+[0;32mI (34131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (34281) SEND DATA: >> Data sent: 87[0m
+[0;32mI (34281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (34431) SEND DATA: >> Data sent: 58[0m
+[0;32mI (34431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (34581) SEND DATA: >> Data sent: 217[0m
+[0;32mI (34581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (34731) SEND DATA: >> Data sent: 175[0m
+[0;32mI (34731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (34881) SEND DATA: >> Data sent: 51[0m
+[0;32mI (34881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (35031) SEND DATA: >> Data sent: 152[0m
+[0;32mI (35031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (35181) SEND DATA: >> Data sent: 142[0m
+[0;32mI (35181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (35331) SEND DATA: >> Data sent: 85[0m
+[0;32mI (35331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (35481) SEND DATA: >> Data sent: 17[0m
+[0;32mI (35481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (35631) SEND DATA: >> Data sent: 17[0m
+[0;32mI (35631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (35781) SEND DATA: >> Data sent: 63[0m
+[0;32mI (35781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (35931) SEND DATA: >> Data sent: 89[0m
+[0;32mI (35931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (36081) SEND DATA: >> Data sent: 141[0m
+[0;32mI (36081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (36231) SEND DATA: >> Data sent: 21[0m
+[0;32mI (36231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (36381) SEND DATA: >> Data sent: 105[0m
+[0;32mI (36381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (36531) SEND DATA: >> Data sent: 205[0m
+[0;32mI (36531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (36681) SEND DATA: >> Data sent: 179[0m
+[0;32mI (36681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (36831) SEND DATA: >> Data sent: 137[0m
+[0;32mI (36831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (36981) SEND DATA: >> Data sent: 187[0m
+[0;32mI (36981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (37131) SEND DATA: >> Data sent: 181[0m
+[0;32mI (37131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (37281) SEND DATA: >> Data sent: 230[0m
+[0;32mI (37281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (37431) SEND DATA: >> Data sent: 80[0m
+[0;32mI (37431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (37581) SEND DATA: >> Data sent: 181[0m
+[0;32mI (37581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (37731) SEND DATA: >> Data sent: 163[0m
+[0;32mI (37731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (37881) SEND DATA: >> Data sent: 33[0m
+[0;32mI (37881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (38031) SEND DATA: >> Data sent: 73[0m
+[0;32mI (38031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (38181) SEND DATA: >> Data sent: 58[0m
+[0;32mI (38181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (38331) SEND DATA: >> Data sent: 159[0m
+[0;32mI (38331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (38481) SEND DATA: >> Data sent: 236[0m
+[0;32mI (38481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (38631) SEND DATA: >> Data sent: 191[0m
+[0;32mI (38631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (38781) SEND DATA: >> Data sent: 238[0m
+[0;32mI (38781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (38931) SEND DATA: >> Data sent: 89[0m
+[0;32mI (38931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (39081) SEND DATA: >> Data sent: 116[0m
+[0;32mI (39081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (39231) SEND DATA: >> Data sent: 112[0m
+[0;32mI (39231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (39381) SEND DATA: >> Data sent: 158[0m
+[0;32mI (39381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (39531) SEND DATA: >> Data sent: 254[0m
+[0;32mI (39531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (39681) SEND DATA: >> Data sent: 231[0m
+[0;32mI (39681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (39831) SEND DATA: >> Data sent: 111[0m
+[0;32mI (39831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (39981) SEND DATA: >> Data sent: 87[0m
+[0;32mI (39981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (40131) SEND DATA: >> Data sent: 135[0m
+[0;32mI (40131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (40281) SEND DATA: >> Data sent: 113[0m
+[0;32mI (40281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (40431) SEND DATA: >> Data sent: 55[0m
+[0;32mI (40431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (40581) SEND DATA: >> Data sent: 189[0m
+[0;32mI (40581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (40731) SEND DATA: >> Data sent: 174[0m
+[0;32mI (40731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (40881) SEND DATA: >> Data sent: 202[0m
+[0;32mI (40881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (41031) SEND DATA: >> Data sent: 122[0m
+[0;32mI (41031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (41181) SEND DATA: >> Data sent: 10[0m
+[0;32mI (41181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (41331) SEND DATA: >> Data sent: 225[0m
+[0;32mI (41331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (41481) SEND DATA: >> Data sent: 213[0m
+[0;32mI (41481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (41631) SEND DATA: >> Data sent: 59[0m
+[0;32mI (41631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (41781) SEND DATA: >> Data sent: 229[0m
+[0;32mI (41781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (41931) SEND DATA: >> Data sent: 195[0m
+[0;32mI (41931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (42081) SEND DATA: >> Data sent: 12[0m
+[0;32mI (42081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (42231) SEND DATA: >> Data sent: 246[0m
+[0;32mI (42231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (42381) SEND DATA: >> Data sent: 59[0m
+[0;32mI (42381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (42531) SEND DATA: >> Data sent: 73[0m
+[0;32mI (42531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (42681) SEND DATA: >> Data sent: 104[0m
+[0;32mI (42681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (42831) SEND DATA: >> Data sent: 90[0m
+[0;32mI (42831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (42981) SEND DATA: >> Data sent: 13[0m
+[0;32mI (42981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (43131) SEND DATA: >> Data sent: 32[0m
+[0;32mI (43131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (43281) SEND DATA: >> Data sent: 187[0m
+[0;32mI (43281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (43431) SEND DATA: >> Data sent: 253[0m
+[0;32mI (43431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (43581) SEND DATA: >> Data sent: 195[0m
+[0;32mI (43581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (43731) SEND DATA: >> Data sent: 34[0m
+[0;32mI (43731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (43881) SEND DATA: >> Data sent: 6[0m
+[0;32mI (43881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (44031) SEND DATA: >> Data sent: 65[0m
+[0;32mI (44031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (44181) SEND DATA: >> Data sent: 182[0m
+[0;32mI (44181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (44331) SEND DATA: >> Data sent: 193[0m
+[0;32mI (44331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (44481) SEND DATA: >> Data sent: 184[0m
+[0;32mI (44481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (44631) SEND DATA: >> Data sent: 197[0m
+[0;32mI (44631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (44781) SEND DATA: >> Data sent: 70[0m
+[0;32mI (44781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (44931) SEND DATA: >> Data sent: 29[0m
+[0;32mI (44931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (45081) SEND DATA: >> Data sent: 91[0m
+[0;32mI (45081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (45231) SEND DATA: >> Data sent: 200[0m
+[0;32mI (45231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (45381) SEND DATA: >> Data sent: 79[0m
+[0;32mI (45381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (45531) SEND DATA: >> Data sent: 219[0m
+[0;32mI (45531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (45681) SEND DATA: >> Data sent: 190[0m
+[0;32mI (45681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (45831) SEND DATA: >> Data sent: 238[0m
+[0;32mI (45831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (45981) SEND DATA: >> Data sent: 233[0m
+[0;32mI (45981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (46131) SEND DATA: >> Data sent: 2[0m
+[0;32mI (46131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (46281) SEND DATA: >> Data sent: 244[0m
+[0;32mI (46281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (46431) SEND DATA: >> Data sent: 103[0m
+[0;32mI (46431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (46581) SEND DATA: >> Data sent: 140[0m
+[0;32mI (46581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (46731) SEND DATA: >> Data sent: 163[0m
+[0;32mI (46731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (46881) SEND DATA: >> Data sent: 105[0m
+[0;32mI (46881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (47031) SEND DATA: >> Data sent: 157[0m
+[0;32mI (47031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (47181) SEND DATA: >> Data sent: 145[0m
+[0;32mI (47181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (47331) SEND DATA: >> Data sent: 221[0m
+[0;32mI (47331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (47481) SEND DATA: >> Data sent: 190[0m
+[0;32mI (47481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (47631) SEND DATA: >> Data sent: 7[0m
+[0;32mI (47631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (47781) SEND DATA: >> Data sent: 0[0m
+[0;32mI (47781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (47931) SEND DATA: >> Data sent: 50[0m
+[0;32mI (47931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (48081) SEND DATA: >> Data sent: 139[0m
+[0;32mI (48081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (48231) SEND DATA: >> Data sent: 124[0m
+[0;32mI (48231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (48381) SEND DATA: >> Data sent: 191[0m
+[0;32mI (48381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (48531) SEND DATA: >> Data sent: 105[0m
+[0;32mI (48531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (48681) SEND DATA: >> Data sent: 57[0m
+[0;32mI (48681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (48831) SEND DATA: >> Data sent: 33[0m
+[0;32mI (48831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (48981) SEND DATA: >> Data sent: 23[0m
+[0;32mI (48981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (49131) SEND DATA: >> Data sent: 235[0m
+[0;32mI (49131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (49281) SEND DATA: >> Data sent: 102[0m
+[0;32mI (49281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (49431) SEND DATA: >> Data sent: 97[0m
+[0;32mI (49431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (49581) SEND DATA: >> Data sent: 61[0m
+[0;32mI (49581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (49731) SEND DATA: >> Data sent: 60[0m
+[0;32mI (49731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (49881) SEND DATA: >> Data sent: 12[0m
+[0;32mI (49881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (50031) SEND DATA: >> Data sent: 44[0m
+[0;32mI (50031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (50181) SEND DATA: >> Data sent: 49[0m
+[0;32mI (50181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (50331) SEND DATA: >> Data sent: 195[0m
+[0;32mI (50331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (50481) SEND DATA: >> Data sent: 86[0m
+[0;32mI (50481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (50631) SEND DATA: >> Data sent: 129[0m
+[0;32mI (50631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (50781) SEND DATA: >> Data sent: 255[0m
+[0;32mI (50781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (50931) SEND DATA: >> Data sent: 211[0m
+[0;32mI (50931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (51081) SEND DATA: >> Data sent: 37[0m
+[0;32mI (51081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (51231) SEND DATA: >> Data sent: 60[0m
+[0;32mI (51231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (51381) SEND DATA: >> Data sent: 202[0m
+[0;32mI (51381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (51531) SEND DATA: >> Data sent: 98[0m
+[0;32mI (51531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (51681) SEND DATA: >> Data sent: 140[0m
+[0;32mI (51681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (51831) SEND DATA: >> Data sent: 5[0m
+[0;32mI (51831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (51981) SEND DATA: >> Data sent: 218[0m
+[0;32mI (51981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (52131) SEND DATA: >> Data sent: 120[0m
+[0;32mI (52131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (52281) SEND DATA: >> Data sent: 243[0m
+[0;32mI (52281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (52431) SEND DATA: >> Data sent: 175[0m
+[0;32mI (52431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (52581) SEND DATA: >> Data sent: 97[0m
+[0;32mI (52581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (52731) SEND DATA: >> Data sent: 244[0m
+[0;32mI (52731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (52881) SEND DATA: >> Data sent: 203[0m
+[0;32mI (52881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (53031) SEND DATA: >> Data sent: 104[0m
+[0;32mI (53031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (53181) SEND DATA: >> Data sent: 88[0m
+[0;32mI (53181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (53331) SEND DATA: >> Data sent: 208[0m
+[0;32mI (53331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (53481) SEND DATA: >> Data sent: 172[0m
+[0;32mI (53481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (53631) SEND DATA: >> Data sent: 229[0m
+[0;32mI (53631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (53781) SEND DATA: >> Data sent: 244[0m
+[0;32mI (53781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (53931) SEND DATA: >> Data sent: 68[0m
+[0;32mI (53941) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (54081) SEND DATA: >> Data sent: 127[0m
+[0;32mI (54081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (54231) SEND DATA: >> Data sent: 227[0m
+[0;32mI (54231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (54381) SEND DATA: >> Data sent: 206[0m
+[0;32mI (54381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (54531) SEND DATA: >> Data sent: 242[0m
+[0;32mI (54531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (54681) SEND DATA: >> Data sent: 96[0m
+[0;32mI (54681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (54831) SEND DATA: >> Data sent: 87[0m
+[0;32mI (54831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (54981) SEND DATA: >> Data sent: 38[0m
+[0;32mI (54981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (55131) SEND DATA: >> Data sent: 248[0m
+[0;32mI (55131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (55281) SEND DATA: >> Data sent: 49[0m
+[0;32mI (55281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (55431) SEND DATA: >> Data sent: 239[0m
+[0;32mI (55431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (55581) SEND DATA: >> Data sent: 30[0m
+[0;32mI (55581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (55731) SEND DATA: >> Data sent: 205[0m
+[0;32mI (55731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (55881) SEND DATA: >> Data sent: 8[0m
+[0;32mI (55881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (56031) SEND DATA: >> Data sent: 95[0m
+[0;32mI (56031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (56181) SEND DATA: >> Data sent: 23[0m
+[0;32mI (56181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (56331) SEND DATA: >> Data sent: 244[0m
+[0;32mI (56331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (56481) SEND DATA: >> Data sent: 5[0m
+[0;32mI (56481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (56631) SEND DATA: >> Data sent: 142[0m
+[0;32mI (56631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (56781) SEND DATA: >> Data sent: 197[0m
+[0;32mI (56781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (56931) SEND DATA: >> Data sent: 222[0m
+[0;32mI (56931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (57081) SEND DATA: >> Data sent: 177[0m
+[0;32mI (57081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (57231) SEND DATA: >> Data sent: 218[0m
+[0;32mI (57231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (57381) SEND DATA: >> Data sent: 197[0m
+[0;32mI (57381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (57531) SEND DATA: >> Data sent: 85[0m
+[0;32mI (57531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (57681) SEND DATA: >> Data sent: 171[0m
+[0;32mI (57681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (57831) SEND DATA: >> Data sent: 27[0m
+[0;32mI (57831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (57981) SEND DATA: >> Data sent: 100[0m
+[0;32mI (57981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (58131) SEND DATA: >> Data sent: 193[0m
+[0;32mI (58131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (58281) SEND DATA: >> Data sent: 15[0m
+[0;32mI (58281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (58431) SEND DATA: >> Data sent: 231[0m
+[0;32mI (58431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (58581) SEND DATA: >> Data sent: 157[0m
+[0;32mI (58581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (58731) SEND DATA: >> Data sent: 124[0m
+[0;32mI (58731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (58881) SEND DATA: >> Data sent: 112[0m
+[0;32mI (58881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (59031) SEND DATA: >> Data sent: 193[0m
+[0;32mI (59031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (59181) SEND DATA: >> Data sent: 40[0m
+[0;32mI (59181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (59331) SEND DATA: >> Data sent: 168[0m
+[0;32mI (59331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (59481) SEND DATA: >> Data sent: 185[0m
+[0;32mI (59481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (59631) SEND DATA: >> Data sent: 155[0m
+[0;32mI (59631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (59781) SEND DATA: >> Data sent: 109[0m
+[0;32mI (59781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (59931) SEND DATA: >> Data sent: 35[0m
+[0;32mI (59931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (60081) SEND DATA: >> Data sent: 51[0m
+[0;32mI (60081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (60231) SEND DATA: >> Data sent: 230[0m
+[0;32mI (60231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (60381) SEND DATA: >> Data sent: 95[0m
+[0;32mI (60381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (60531) SEND DATA: >> Data sent: 255[0m
+[0;32mI (60531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (60681) SEND DATA: >> Data sent: 32[0m
+[0;32mI (60681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (60831) SEND DATA: >> Data sent: 25[0m
+[0;32mI (60831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (60981) SEND DATA: >> Data sent: 211[0m
+[0;32mI (60981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (61131) SEND DATA: >> Data sent: 53[0m
+[0;32mI (61131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (61281) SEND DATA: >> Data sent: 146[0m
+[0;32mI (61281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (61431) SEND DATA: >> Data sent: 59[0m
+[0;32mI (61431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (61581) SEND DATA: >> Data sent: 154[0m
+[0;32mI (61581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (61731) SEND DATA: >> Data sent: 72[0m
+[0;32mI (61731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (61881) SEND DATA: >> Data sent: 8[0m
+[0;32mI (61881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (62031) SEND DATA: >> Data sent: 52[0m
+[0;32mI (62031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (62181) SEND DATA: >> Data sent: 118[0m
+[0;32mI (62181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (62331) SEND DATA: >> Data sent: 25[0m
+[0;32mI (62331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (62481) SEND DATA: >> Data sent: 45[0m
+[0;32mI (62481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (62631) SEND DATA: >> Data sent: 104[0m
+[0;32mI (62631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (62781) SEND DATA: >> Data sent: 63[0m
+[0;32mI (62781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (62931) SEND DATA: >> Data sent: 254[0m
+[0;32mI (62931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (63081) SEND DATA: >> Data sent: 75[0m
+[0;32mI (63081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (63231) SEND DATA: >> Data sent: 197[0m
+[0;32mI (63231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (63381) SEND DATA: >> Data sent: 89[0m
+[0;32mI (63381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (63531) SEND DATA: >> Data sent: 46[0m
+[0;32mI (63531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (63681) SEND DATA: >> Data sent: 65[0m
+[0;32mI (63681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (63831) SEND DATA: >> Data sent: 31[0m
+[0;32mI (63831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (63981) SEND DATA: >> Data sent: 254[0m
+[0;32mI (63981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (64131) SEND DATA: >> Data sent: 111[0m
+[0;32mI (64131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (64281) SEND DATA: >> Data sent: 51[0m
+[0;32mI (64281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (64431) SEND DATA: >> Data sent: 249[0m
+[0;32mI (64431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (64581) SEND DATA: >> Data sent: 192[0m
+[0;32mI (64581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (64731) SEND DATA: >> Data sent: 173[0m
+[0;32mI (64731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (64881) SEND DATA: >> Data sent: 63[0m
+[0;32mI (64881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (65031) SEND DATA: >> Data sent: 210[0m
+[0;32mI (65031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (65181) SEND DATA: >> Data sent: 79[0m
+[0;32mI (65181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (65331) SEND DATA: >> Data sent: 239[0m
+[0;32mI (65331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (65481) SEND DATA: >> Data sent: 41[0m
+[0;32mI (65481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (65631) SEND DATA: >> Data sent: 231[0m
+[0;32mI (65631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (65781) SEND DATA: >> Data sent: 153[0m
+[0;32mI (65781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (65931) SEND DATA: >> Data sent: 49[0m
+[0;32mI (65931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (66081) SEND DATA: >> Data sent: 189[0m
+[0;32mI (66081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (66231) SEND DATA: >> Data sent: 112[0m
+[0;32mI (66231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (66381) SEND DATA: >> Data sent: 0[0m
+[0;32mI (66381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (66531) SEND DATA: >> Data sent: 16[0m
+[0;32mI (66531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (66681) SEND DATA: >> Data sent: 20[0m
+[0;32mI (66681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (66831) SEND DATA: >> Data sent: 255[0m
+[0;32mI (66831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (66981) SEND DATA: >> Data sent: 151[0m
+[0;32mI (66981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (67131) SEND DATA: >> Data sent: 15[0m
+[0;32mI (67131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (67281) SEND DATA: >> Data sent: 231[0m
+[0;32mI (67281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (67431) SEND DATA: >> Data sent: 113[0m
+[0;32mI (67431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (67581) SEND DATA: >> Data sent: 251[0m
+[0;32mI (67581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (67731) SEND DATA: >> Data sent: 57[0m
+[0;32mI (67731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (67881) SEND DATA: >> Data sent: 121[0m
+[0;32mI (67881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (68031) SEND DATA: >> Data sent: 155[0m
+[0;32mI (68031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (68181) SEND DATA: >> Data sent: 46[0m
+[0;32mI (68181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (68331) SEND DATA: >> Data sent: 46[0m
+[0;32mI (68331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (68481) SEND DATA: >> Data sent: 108[0m
+[0;32mI (68481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (68631) SEND DATA: >> Data sent: 69[0m
+[0;32mI (68631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (68781) SEND DATA: >> Data sent: 37[0m
+[0;32mI (68781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (68931) SEND DATA: >> Data sent: 229[0m
+[0;32mI (68931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (69081) SEND DATA: >> Data sent: 174[0m
+[0;32mI (69081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (69231) SEND DATA: >> Data sent: 120[0m
+[0;32mI (69231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (69381) SEND DATA: >> Data sent: 76[0m
+[0;32mI (69381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (69531) SEND DATA: >> Data sent: 2[0m
+[0;32mI (69531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (69681) SEND DATA: >> Data sent: 223[0m
+[0;32mI (69681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (69831) SEND DATA: >> Data sent: 96[0m
+[0;32mI (69831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (69981) SEND DATA: >> Data sent: 188[0m
+[0;32mI (69981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (70131) SEND DATA: >> Data sent: 56[0m
+[0;32mI (70131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (70281) SEND DATA: >> Data sent: 226[0m
+[0;32mI (70281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (70431) SEND DATA: >> Data sent: 118[0m
+[0;32mI (70431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (70581) SEND DATA: >> Data sent: 183[0m
+[0;32mI (70581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (70731) SEND DATA: >> Data sent: 114[0m
+[0;32mI (70731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (70881) SEND DATA: >> Data sent: 198[0m
+[0;32mI (70881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (71031) SEND DATA: >> Data sent: 235[0m
+[0;32mI (71031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (71181) SEND DATA: >> Data sent: 164[0m
+[0;32mI (71181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (71331) SEND DATA: >> Data sent: 31[0m
+[0;32mI (71331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (71481) SEND DATA: >> Data sent: 34[0m
+[0;32mI (71481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (71631) SEND DATA: >> Data sent: 28[0m
+[0;32mI (71631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (71781) SEND DATA: >> Data sent: 139[0m
+[0;32mI (71781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (71931) SEND DATA: >> Data sent: 64[0m
+[0;32mI (71931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (72081) SEND DATA: >> Data sent: 218[0m
+[0;32mI (72081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (72231) SEND DATA: >> Data sent: 207[0m
+[0;32mI (72231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (72381) SEND DATA: >> Data sent: 50[0m
+[0;32mI (72381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (72531) SEND DATA: >> Data sent: 117[0m
+[0;32mI (72531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (72681) SEND DATA: >> Data sent: 237[0m
+[0;32mI (72681) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (72831) SEND DATA: >> Data sent: 1[0m
+[0;32mI (72831) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (72981) SEND DATA: >> Data sent: 63[0m
+[0;32mI (72981) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (73131) SEND DATA: >> Data sent: 31[0m
+[0;32mI (73131) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (73281) SEND DATA: >> Data sent: 18[0m
+[0;32mI (73281) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (73431) SEND DATA: >> Data sent: 254[0m
+[0;32mI (73431) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (73581) SEND DATA: >> Data sent: 129[0m
+[0;32mI (73581) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (73731) SEND DATA: >> Data sent: 29[0m
+[0;32mI (73731) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (73881) SEND DATA: >> Data sent: 2[0m
+[0;32mI (73881) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (74031) SEND DATA: >> Data sent: 116[0m
+[0;32mI (74031) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (74181) SEND DATA: >> Data sent: 78[0m
+[0;32mI (74181) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (74331) SEND DATA: >> Data sent: 209[0m
+[0;32mI (74331) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (74481) SEND DATA: >> Data sent: 208[0m
+[0;32mI (74481) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (74631) SEND DATA: >> Data sent: 157[0m
+[0;32mI (74631) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (74781) SEND DATA: >> Data sent: 196[0m
+[0;32mI (74781) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (74931) SEND DATA: >> Data sent: 111[0m
+[0;32mI (74931) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (75081) SEND DATA: >> Data sent: 164[0m
+[0;32mI (75081) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (75231) SEND DATA: >> Data sent: 151[0m
+[0;32mI (75231) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (75381) SEND DATA: >> Data sent: 145[0m
+[0;32mI (75381) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (75531) SEND DATA: >> Data sent: 153[0m
+[0;32mI (75531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m

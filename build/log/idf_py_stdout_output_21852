@@ -1,0 +1,346 @@
+Command: D:\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe D:\Espressif\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\Espressif\workspace\espnow_conn_test\build\espnow_conn_test.elf D:\Espressif\workspace\espnow_conn_test\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe' 'D:\Espressif\esp-idf\tools\idf.py'
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xe�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.1-dev-786-g130fdc7ce7 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 11 2026 13:38:55[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17e94h ( 97940) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00027ebc vaddr=3ffb0000 size=04124h ( 16676) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002bfe8 vaddr=40080000 size=04030h ( 16432) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=8059ch (525724) map[0m
+[0;32mI (326) esp_image: segment 4: paddr=000b05c4 vaddr=40084030 size=11408h ( 70664) load[0m
+[0;32mI (355) esp_image: segment 5: paddr=000c19d4 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (366) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (366) boot: Disabling RNG early entropy source...[0m
+[0;32mI (376) cpu_start: Multicore app[0m
+[0;32mI (384) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (385) cpu_start: Pro cpu start user code[0m
+[0;32mI (385) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (387) app_init: Application information:[0m
+[0;32mI (390) app_init: Project name:     espnow_conn_test[0m
+[0;32mI (395) app_init: App version:      1[0m
+[0;32mI (398) app_init: Compile time:     Jan 11 2026 13:34:59[0m
+[0;32mI (403) app_init: ELF file SHA256:  1e988b27b...[0m
+[0;32mI (408) app_init: ESP-IDF:          v6.1-dev-786-g130fdc7ce7[0m
+[0;32mI (413) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (417) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (421) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (425) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (431) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (436) heap_init: At 3FFB8550 len 00027AB0 (158 KiB): DRAM[0m
+[0;32mI (441) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (447) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (452) heap_init: At 40095438 len 0000ABC8 (42 KiB): IRAM[0m
+[0;33mW (459) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (471) spi_flash: detected chip: generic[0m
+[0;32mI (474) spi_flash: flash io: dio[0m
+[0;33mW (477) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (491) main_task: Started on CPU0[0m
+[0;32mI (501) main_task: Calling app_main()[0m
+Start of main
+[0;33mW (501) ESP-NOW: STARTING ESP-NOW...[0m
+[0;33mW (511) ESP-NOW: WAITING FOR ESP-NOW TO START[0m
+00
+[0;32mI (521) wifi:wifi driver task: 3ffc1bb0, prio:23, stack:6656, core=0[0m
+[0;32mI (521) wifi:wifi firmware version: 6a8253a[0m
+[0;32mI (521) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (521) wifi:config nano formatting: disabled[0m
+[0;32mI (531) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (531) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (541) wifi:Init management short buffer num: 32[0m
+[0;32mI (541) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (551) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (551) wifi:Init static rx buffer num: 10[0m
+[0;32mI (551) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (561) wifi_init: rx ba win: 6[0m
+[0;32mI (561) wifi_init: accept mbox: 6[0m
+[0;32mI (561) wifi_init: tcpip mbox: 32[0m
+[0;32mI (571) wifi_init: udp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp tx win: 5760[0m
+[0;32mI (581) wifi_init: tcp rx win: 5760[0m
+[0;32mI (581) wifi_init: tcp mss: 1440[0m
+[0;32mI (581) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (581) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (591) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (681) wifi:mode : sta (78:1c:3c:f6:d6:cc)[0m
+[0;32mI (681) wifi:enable tsf[0m
+[0;32mI (681) ESPNOW: espnow [version: 2.0] init[0m
+[0;33mW (731) ESP-NOW: >> Info: ESP-NOW initiated successfully![0m
+[0;33mW (1011) ESP-NOW: STARTING PAIRING MODE AND REGISTER MAC TASK[0m
+[0;32mI (1011) RECEIVE: >> Info: Receive task has been started.[0m
+[0;32mI (1511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (1511) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;33mW (1511) RECEIVE: >> Info: New ACK packet received. Sending this mac to register task.[0m
+[0;32mI (2511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (2511) REGISTER MAC: >> Data in register mac task.[0m
+[0;33mW (2511) REGISTER MAC: >> Info: A new global address has been added: DC B4 D9 8D 36 70[0m
+[0;32mI (3011) MAIN: >> Info: Received ACK signal. Stating vTask_esp_now_send_data.[0m
+11
+[0;32mI (3511) main_task: Returned from app_main()[0m
+[0;33mW (3511) SEND DATA: vTask_esp_now_send_data is triggerred![0m
+[0;32mI (3511) PAIRING: Broadcast packet sent successfully.[0m
+[0;32mI (3511) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;33mW (3511) SEND DATA: >> Data sent 233[0m
+[0;32mI (3521) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (3521) PAIRING: EXITING PAIRING PROCESS...[0m
+[0;32mI (3531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (3541) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (4531) SEND DATA: >> Data sent 202[0m
+[0;32mI (4531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (4531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (5531) SEND DATA: >> Data sent 42[0m
+[0;32mI (5531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (5531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (6531) SEND DATA: >> Data sent 215[0m
+[0;32mI (6531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (6531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (7531) SEND DATA: >> Data sent 133[0m
+[0;32mI (7531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (7531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (8531) SEND DATA: >> Data sent 175[0m
+[0;32mI (8531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (8531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (9531) SEND DATA: >> Data sent 13[0m
+[0;32mI (9531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (9531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (10531) SEND DATA: >> Data sent 80[0m
+[0;32mI (10531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (10531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (11531) SEND DATA: >> Data sent 123[0m
+[0;32mI (11531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (11531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (12531) SEND DATA: >> Data sent 146[0m
+[0;32mI (12551) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (12551) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (13531) SEND DATA: >> Data sent 141[0m
+[0;32mI (13531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (13531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (14531) SEND DATA: >> Data sent 186[0m
+[0;32mI (14531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (14531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (15531) SEND DATA: >> Data sent 238[0m
+[0;32mI (15541) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (15541) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (16531) SEND DATA: >> Data sent 53[0m
+[0;32mI (16531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (16531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (17531) SEND DATA: >> Data sent 236[0m
+[0;32mI (17531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (17531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (18531) SEND DATA: >> Data sent 112[0m
+[0;32mI (18531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (18531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (19531) SEND DATA: >> Data sent 227[0m
+[0;32mI (19531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (19531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (20531) SEND DATA: >> Data sent 205[0m
+[0;32mI (20531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (20531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (21531) SEND DATA: >> Data sent 79[0m
+[0;32mI (21531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (21531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (22531) SEND DATA: >> Data sent 209[0m
+[0;32mI (22531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (22531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (23531) SEND DATA: >> Data sent 129[0m
+[0;32mI (23531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (23531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (24531) SEND DATA: >> Data sent 155[0m
+[0;32mI (24531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (24531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (25531) SEND DATA: >> Data sent 151[0m
+[0;32mI (25531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (25531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (26531) SEND DATA: >> Data sent 161[0m
+[0;32mI (26531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (26531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (27531) SEND DATA: >> Data sent 154[0m
+[0;32mI (27531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (27531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (28531) SEND DATA: >> Data sent 217[0m
+[0;32mI (28531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (28531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (29531) SEND DATA: >> Data sent 89[0m
+[0;32mI (29531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (29531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (30531) SEND DATA: >> Data sent 61[0m
+[0;32mI (30531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (30531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (31531) SEND DATA: >> Data sent 136[0m
+[0;32mI (31531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (31531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (32531) SEND DATA: >> Data sent 148[0m
+[0;32mI (32531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (32531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (33531) SEND DATA: >> Data sent 162[0m
+[0;32mI (33531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (33531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (34531) SEND DATA: >> Data sent 253[0m
+[0;32mI (34531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (34531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (35531) SEND DATA: >> Data sent 87[0m
+[0;32mI (35531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (35531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (36531) SEND DATA: >> Data sent 40[0m
+[0;32mI (36531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (36531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (37531) SEND DATA: >> Data sent 67[0m
+[0;32mI (37531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (37531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (38531) SEND DATA: >> Data sent 223[0m
+[0;32mI (38531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (38531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (39531) SEND DATA: >> Data sent 55[0m
+[0;32mI (39531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (39531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (40531) SEND DATA: >> Data sent 142[0m
+[0;32mI (40531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (40531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (41531) SEND DATA: >> Data sent 99[0m
+[0;32mI (41531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (41531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (42531) SEND DATA: >> Data sent 223[0m
+[0;32mI (42531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (42531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (43531) SEND DATA: >> Data sent 26[0m
+[0;32mI (43531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (43531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (44531) SEND DATA: >> Data sent 58[0m
+[0;32mI (44531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (44531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (45531) SEND DATA: >> Data sent 224[0m
+[0;32mI (45531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (45531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (46531) SEND DATA: >> Data sent 57[0m
+[0;32mI (46531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (46531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (47531) SEND DATA: >> Data sent 116[0m
+[0;32mI (47531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (47531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (48531) SEND DATA: >> Data sent 184[0m
+[0;32mI (48531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (48531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (49531) SEND DATA: >> Data sent 58[0m
+[0;32mI (49531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (49531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (50531) SEND DATA: >> Data sent 133[0m
+[0;32mI (50531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (50531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (51531) SEND DATA: >> Data sent 133[0m
+[0;32mI (51531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (51531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (52531) SEND DATA: >> Data sent 44[0m
+[0;32mI (52531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (52531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (53531) SEND DATA: >> Data sent 109[0m
+[0;32mI (53531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (53531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (54531) SEND DATA: >> Data sent 82[0m
+[0;32mI (54531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (54531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (55531) SEND DATA: >> Data sent 72[0m
+[0;32mI (55531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (55531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (56531) SEND DATA: >> Data sent 213[0m
+[0;32mI (56531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (56531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (57531) SEND DATA: >> Data sent 154[0m
+[0;32mI (57531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (57531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (58531) SEND DATA: >> Data sent 201[0m
+[0;32mI (58531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (58531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (59531) SEND DATA: >> Data sent 107[0m
+[0;32mI (59531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (59531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (60531) SEND DATA: >> Data sent 217[0m
+[0;32mI (60531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (60531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (61531) SEND DATA: >> Data sent 154[0m
+[0;32mI (61531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (61531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (62531) SEND DATA: >> Data sent 118[0m
+[0;32mI (62531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (62531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (63531) SEND DATA: >> Data sent 231[0m
+[0;32mI (63531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (63531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (64531) SEND DATA: >> Data sent 76[0m
+[0;32mI (64531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (64531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (65531) SEND DATA: >> Data sent 200[0m
+[0;32mI (65531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (65531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (66531) SEND DATA: >> Data sent 48[0m
+[0;32mI (66531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (66531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (67531) SEND DATA: >> Data sent 253[0m
+[0;32mI (67531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (67531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (68531) SEND DATA: >> Data sent 250[0m
+[0;32mI (68531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (68531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (69531) SEND DATA: >> Data sent 13[0m
+[0;32mI (69531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (69531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (70531) SEND DATA: >> Data sent 12[0m
+[0;32mI (70531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (70531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (71531) SEND DATA: >> Data sent 81[0m
+[0;32mI (71531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (71531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+11
+[0;33mW (72531) SEND DATA: >> Data sent 165[0m
+[0;32mI (72531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (72531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (73531) SEND DATA: >> Data sent 194[0m
+[0;32mI (73531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (73531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
+[0;33mW (74531) SEND DATA: >> Data sent 137[0m
+[0;32mI (74531) RECEIVE: >> Info: something landed in queue_esp_now_recv[0m
+[0;32mI (74531) RECEIVE: >> Info: Data or Ack packet received from registered peer.[0m
