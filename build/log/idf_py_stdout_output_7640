@@ -1,0 +1,262 @@
+Command: D:\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe D:\Espressif\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\Espressif\workspace\espnow_conn_test\build\espnow_conn_test.elf D:\Espressif\workspace\espnow_conn_test\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe' 'D:\Espressif\esp-idf\tools\idf.py'
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xe�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.1-dev-786-g130fdc7ce7 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 17 2026 18:16:55[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=17ae4h ( 96996) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00027b0c vaddr=3ffb0000 size=04124h ( 16676) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002bc38 vaddr=40080000 size=043e0h ( 17376) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=803f4h (525300) map[0m
+[0;32mI (326) esp_image: segment 4: paddr=000b041c vaddr=400843e0 size=11058h ( 69720) load[0m
+[0;32mI (354) esp_image: segment 5: paddr=000c147c vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (365) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (365) boot: Disabling RNG early entropy source...[0m
+[0;32mI (376) cpu_start: Multicore app[0m
+[0;32mI (384) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (384) cpu_start: Pro cpu start user code[0m
+[0;32mI (384) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (386) app_init: Application information:[0m
+[0;32mI (390) app_init: Project name:     espnow_conn_test[0m
+[0;32mI (395) app_init: App version:      2aaab30-dirty[0m
+[0;32mI (399) app_init: Compile time:     Jan 17 2026 18:13:35[0m
+[0;32mI (404) app_init: ELF file SHA256:  3e042aed7...[0m
+[0;32mI (408) app_init: ESP-IDF:          v6.1-dev-786-g130fdc7ce7[0m
+[0;32mI (414) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (418) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (422) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (426) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (432) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (437) heap_init: At 3FFB8540 len 00027AC0 (158 KiB): DRAM[0m
+[0;32mI (442) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (447) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (453) heap_init: At 40095438 len 0000ABC8 (42 KiB): IRAM[0m
+[0;33mW (460) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (471) spi_flash: detected chip: generic[0m
+[0;32mI (475) spi_flash: flash io: dio[0m
+[0;33mW (478) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (491) main_task: Started on CPU0[0m
+[0;32mI (501) main_task: Calling app_main()[0m
+[0;33mW (501) MAIN: >> Info: Waiting for ESP-NOW to start![0m
+[0;33mW (501) ESP-NOW: STARTING ESP-NOW...[0m
+[0;32mI (521) wifi:wifi driver task: 3ffc3e28, prio:23, stack:6656, core=0[0m
+[0;32mI (521) wifi:wifi firmware version: 6a8253a[0m
+[0;32mI (521) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (521) wifi:config nano formatting: disabled[0m
+[0;32mI (531) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (531) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (541) wifi:Init management short buffer num: 32[0m
+[0;32mI (541) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (551) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (551) wifi:Init static rx buffer num: 10[0m
+[0;32mI (551) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (561) wifi_init: rx ba win: 6[0m
+[0;32mI (561) wifi_init: accept mbox: 6[0m
+[0;32mI (561) wifi_init: tcpip mbox: 32[0m
+[0;32mI (571) wifi_init: udp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp tx win: 5760[0m
+[0;32mI (581) wifi_init: tcp rx win: 5760[0m
+[0;32mI (581) wifi_init: tcp mss: 1440[0m
+[0;32mI (581) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (591) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (591) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (681) wifi:mode : sta (78:1c:3c:f6:d6:cc)[0m
+[0;32mI (681) wifi:enable tsf[0m
+[0;32mI (691) ESPNOW: espnow [version: 2.0] init[0m
+[0;33mW (741) ESP-NOW: >> Info: ESP-NOW initiated successfully![0m
+[0;32mI (1001) MAIN: >> Info: Starting to broadcast data[0m
+[0;32mI (1001) MAIN: >> Info: End of Main...[0m
+[0;32mI (1001) main_task: Returned from app_main()[0m
+[0;32mI (1001) SEND DATA: Random int: 7[0m
+[0;32mI (1001) ESP-NOW: Status & Task Registers: [0m
+[0;33mW (1001) SEND DATA: >> Data sent. Tag: A2 Data 4294967295[0m
+1
+111
+[0;32mI (1341) SEND DATA: Random int: 7[0m
+[0;33mW (1341) SEND DATA: >> Data sent. Tag: 2F Data 4294967295[0m
+[0;32mI (1671) SEND DATA: Random int: 7[0m
+[0;33mW (1671) SEND DATA: >> Data sent. Tag: 91 Data 4294967295[0m
+[0;32mI (2001) SEND DATA: Random int: 7[0m
+[0;33mW (2001) SEND DATA: >> Data sent. Tag: CC Data 4294967295[0m
+[0;32mI (2331) SEND DATA: Random int: 7[0m
+[0;33mW (2331) SEND DATA: >> Data sent. Tag: 88 Data 4294967295[0m
+[0;32mI (2661) SEND DATA: Random int: 7[0m
+[0;33mW (2661) SEND DATA: >> Data sent. Tag: 20 Data 4294967295[0m
+[0;32mI (2991) SEND DATA: Random int: 7[0m
+[0;33mW (2991) SEND DATA: >> Data sent. Tag: 59 Data 4294967295[0m
+[0;32mI (3321) SEND DATA: Random int: 7[0m
+[0;33mW (3321) SEND DATA: >> Data sent. Tag: DC Data 4294967295[0m
+[0;32mI (3651) SEND DATA: Random int: 7[0m
+[0;33mW (3651) SEND DATA: >> Data sent. Tag: 65 Data 4294967295[0m
+[0;32mI (3981) SEND DATA: Random int: 7[0m
+[0;33mW (3981) SEND DATA: >> Data sent. Tag: CC Data 4294967295[0m
+[0;32mI (4011) ESP-NOW: Status & Task Registers: [0m
+1
+111
+[0;32mI (4311) SEND DATA: Random int: 7[0m
+[0;33mW (4311) SEND DATA: >> Data sent. Tag: 7F Data 4294967295[0m
+[0;32mI (4641) SEND DATA: Random int: 7[0m
+[0;33mW (4641) SEND DATA: >> Data sent. Tag: 50 Data 4294967295[0m
+[0;32mI (4971) SEND DATA: Random int: 7[0m
+[0;33mW (4971) SEND DATA: >> Data sent. Tag: 59 Data 4294967295[0m
+[0;32mI (5301) SEND DATA: Random int: 7[0m
+[0;33mW (5301) SEND DATA: >> Data sent. Tag: 2B Data 4294967295[0m
+[0;32mI (5631) SEND DATA: Random int: 7[0m
+[0;33mW (5631) SEND DATA: >> Data sent. Tag: 83 Data 4294967295[0m
+[0;32mI (5961) SEND DATA: Random int: 7[0m
+[0;33mW (5961) SEND DATA: >> Data sent. Tag: F2 Data 4294967295[0m
+[0;32mI (6291) SEND DATA: Random int: 7[0m
+[0;33mW (6291) SEND DATA: >> Data sent. Tag: 7D Data 4294967295[0m
+[0;32mI (6621) SEND DATA: Random int: 7[0m
+[0;33mW (6621) SEND DATA: >> Data sent. Tag: A8 Data 4294967295[0m
+[0;32mI (6951) SEND DATA: Random int: 7[0m
+[0;33mW (6951) SEND DATA: >> Data sent. Tag: A8 Data 4294967295[0m
+[0;32mI (7011) ESP-NOW: Status & Task Registers: [0m
+1
+111
+[0;32mI (7281) SEND DATA: Random int: 7[0m
+[0;33mW (7281) SEND DATA: >> Data sent. Tag: 13 Data 4294967295[0m
+[0;32mI (7611) SEND DATA: Random int: 7[0m
+[0;33mW (7611) SEND DATA: >> Data sent. Tag: 09 Data 4294967295[0m
+[0;32mI (7941) SEND DATA: Random int: 7[0m
+[0;33mW (7941) SEND DATA: >> Data sent. Tag: 69 Data 4294967295[0m
+[0;32mI (8271) SEND DATA: Random int: 7[0m
+[0;33mW (8271) SEND DATA: >> Data sent. Tag: EB Data 4294967295[0m
+[0;32mI (8601) SEND DATA: Random int: 7[0m
+[0;33mW (8601) SEND DATA: >> Data sent. Tag: C5 Data 4294967295[0m
+[0;32mI (8931) SEND DATA: Random int: 7[0m
+[0;33mW (8931) SEND DATA: >> Data sent. Tag: 84 Data 4294967295[0m
+[0;32mI (9261) SEND DATA: Random int: 7[0m
+[0;33mW (9261) SEND DATA: >> Data sent. Tag: 63 Data 4294967295[0m
+[0;32mI (9591) SEND DATA: Random int: 7[0m
+[0;33mW (9591) SEND DATA: >> Data sent. Tag: 94 Data 4294967295[0m
+[0;32mI (9921) SEND DATA: Random int: 7[0m
+[0;33mW (9921) SEND DATA: >> Data sent. Tag: A1 Data 4294967295[0m
+[0;32mI (10011) ESP-NOW: Status & Task Registers: [0m
+1
+111
+[0;32mI (10251) SEND DATA: Random int: 7[0m
+[0;33mW (10251) SEND DATA: >> Data sent. Tag: E5 Data 4294967295[0m
+[0;32mI (10581) SEND DATA: Random int: 7[0m
+[0;33mW (10581) SEND DATA: >> Data sent. Tag: D3 Data 4294967295[0m
+[0;32mI (10911) SEND DATA: Random int: 7[0m
+[0;33mW (10911) SEND DATA: >> Data sent. Tag: 1A Data 4294967295[0m
+[0;32mI (11241) SEND DATA: Random int: 7[0m
+[0;33mW (11241) SEND DATA: >> Data sent. Tag: 17 Data 4294967295[0m
+[0;32mI (11571) SEND DATA: Random int: 7[0m
+[0;33mW (11571) SEND DATA: >> Data sent. Tag: 60 Data 4294967295[0m
+[0;32mI (11901) SEND DATA: Random int: 7[0m
+[0;33mW (11901) SEND DATA: >> Data sent. Tag: 22 Data 4294967295[0m
+[0;32mI (12231) SEND DATA: Random int: 7[0m
+[0;33mW (12231) SEND DATA: >> Data sent. Tag: D1 Data 4294967295[0m
+[0;32mI (12561) SEND DATA: Random int: 7[0m
+[0;33mW (12561) SEND DATA: >> Data sent. Tag: 63 Data 4294967295[0m
+[0;32mI (12891) SEND DATA: Random int: 7[0m
+[0;33mW (12891) SEND DATA: >> Data sent. Tag: EB Data 4294967295[0m
+[0;32mI (13011) ESP-NOW: Status & Task Registers: [0m
+1
+111
+[0;32mI (13221) SEND DATA: Random int: 7[0m
+[0;33mW (13221) SEND DATA: >> Data sent. Tag: 7E Data 4294967295[0m
+[0;32mI (13551) SEND DATA: Random int: 7[0m
+[0;33mW (13551) SEND DATA: >> Data sent. Tag: 72 Data 4294967295[0m
+[0;32mI (13881) SEND DATA: Random int: 7[0m
+[0;33mW (13881) SEND DATA: >> Data sent. Tag: 81 Data 4294967295[0m
+[0;32mI (14211) SEND DATA: Random int: 7[0m
+[0;33mW (14211) SEND DATA: >> Data sent. Tag: 68 Data 4294967295[0m
+[0;32mI (14541) SEND DATA: Random int: 7[0m
+[0;33mW (14541) SEND DATA: >> Data sent. Tag: D5 Data 4294967295[0m
+[0;32mI (14871) SEND DATA: Random int: 7[0m
+[0;33mW (14871) SEND DATA: >> Data sent. Tag: A7 Data 4294967295[0m
+[0;32mI (15201) SEND DATA: Random int: 7[0m
+[0;33mW (15201) SEND DATA: >> Data sent. Tag: 51 Data 4294967295[0m
+[0;32mI (15531) SEND DATA: Random int: 7[0m
+[0;33mW (15531) SEND DATA: >> Data sent. Tag: 96 Data 4294967295[0m
+[0;32mI (15861) SEND DATA: Random int: 7[0m
+[0;33mW (15861) SEND DATA: >> Data sent. Tag: FF Data 4294967295[0m
+[0;32mI (16011) ESP-NOW: Status & Task Registers: [0m
+1
+111
+[0;32mI (16191) SEND DATA: Random int: 7[0m
+[0;33mW (16191) SEND DATA: >> Data sent. Tag: F8 Data 4294967295[0m
+[0;32mI (16521) SEND DATA: Random int: 7[0m
+[0;33mW (16521) SEND DATA: >> Data sent. Tag: DC Data 4294967295[0m
+[0;32mI (16851) SEND DATA: Random int: 7[0m
+[0;33mW (16851) SEND DATA: >> Data sent. Tag: DD Data 4294967295[0m
+[0;32mI (17181) SEND DATA: Random int: 7[0m
+[0;33mW (17181) SEND DATA: >> Data sent. Tag: EB Data 4294967295[0m
+[0;32mI (17511) SEND DATA: Random int: 7[0m
+[0;33mW (17511) SEND DATA: >> Data sent. Tag: 56 Data 4294967295[0m
+[0;32mI (17841) SEND DATA: Random int: 7[0m
+[0;33mW (17841) SEND DATA: >> Data sent. Tag: 4B Data 4294967295[0m
+[0;32mI (18171) SEND DATA: Random int: 7[0m
+[0;33mW (18171) SEND DATA: >> Data sent. Tag: 1E Data 4294967295[0m
+[0;32mI (18501) SEND DATA: Random int: 7[0m
+[0;33mW (18501) SEND DATA: >> Data sent. Tag: ED Data 4294967295[0m
+[0;32mI (18831) SEND DATA: Random int: 7[0m
+[0;33mW (18831) SEND DATA: >> Data sent. Tag: BB Data 4294967295[0m
+[0;32mI (19011) ESP-NOW: Status & Task Registers: [0m
+1
+111
+[0;32mI (19161) SEND DATA: Random int: 7[0m
+[0;33mW (19161) SEND DATA: >> Data sent. Tag: 31 Data 4294967295[0m
+[0;32mI (19491) SEND DATA: Random int: 7[0m
+[0;33mW (19491) SEND DATA: >> Data sent. Tag: FB Data 4294967295[0m
+[0;32mI (19821) SEND DATA: Random int: 7[0m
+[0;33mW (19821) SEND DATA: >> Data sent. Tag: 63 Data 4294967295[0m
+[0;32mI (20151) SEND DATA: Random int: 7[0m
+[0;33mW (20151) SEND DATA: >> Data sent. Tag: 4F Data 4294967295[0m
+[0;32mI (20481) SEND DATA: Random int: 7[0m
+[0;33mW (20481) SEND DATA: >> Data sent. Tag: 59 Data 4294967295[0m
+[0;32mI (20811) SEND DATA: Random int: 7[0m
+[0;33mW (20811) SEND DATA: >> Data sent. Tag: 85 Data 4294967295[0m
+[0;32mI (21141) SEND DATA: Random int: 7[0m
+[0;33mW (21141) SEND DATA: >> Data sent. Tag: B6 Data 4294967295[0m
+[0;32mI (21471) SEND DATA: Random int: 7[0m
+[0;33mW (21471) SEND DATA: >> Data sent. Tag: 90 Data 4294967295[0m
+[0;32mI (21801) SEND DATA: Random int: 7[0m
+[0;33mW (21801) SEND DATA: >> Data sent. Tag: 2D Data 4294967295[0m
+[0;32mI (22011) ESP-NOW: Status & Task Registers: [0m
+1
+111
+[0;32mI (22131) SEND DATA: Random int: 7[0m
+[0;33mW (22131) SEND DATA: >> Data sent. Tag: E8 Data 4294967295[0m
+[0;32mI (22461) SEND DATA: Random int: 7[0m
+[0;33mW (22461) SEND DATA: >> Data sent. Tag: 6F Data 4294967295[0m
+[0;32mI (22791) SEND DATA: Random int: 7[0m
+[0;33mW (22791) SEND DATA: >> Data sent. Tag: C8 Data 4294967295[0m
+[0;32mI (23121) SEND DATA: Random int: 7[0m
+[0;33mW (23121) SEND DATA: >> Data sent. Tag: 6E Data 4294967295[0m
+[0;32mI (23451) SEND DATA: Random int: 7[0m
+[0;33mW (23451) SEND DATA: >> Data sent. Tag: BE Data 4294967295[0m
+[0;32mI (23781) SEND DATA: Random int: 7[0m
+[0;33mW (23781) SEND DATA: >> Data sent. Tag: F1 Data 4294967295[0m
+[0;32mI (24111) SEND DATA: Random int: 7[0m
+[0;33mW (24111) SEND DATA: >> Data sent. Tag: A6 Data 4294967295[0m
+[0;32mI (24441) SEND DATA: Random int: 7[0m
+[0;33mW (24441) SEND DATA: >> Data sent. Tag: 03 Data 4294967295[0m
+[0;32mI (24771) SEND DATA: Random int: 7[0m
+[0;33mW (24771) SEND DATA: >> Data sent. Tag: 6C Data 4294967295[0m

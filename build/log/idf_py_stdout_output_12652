@@ -1,0 +1,1973 @@
+Command: D:\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe D:\Espressif\esp-idf\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\Espressif\workspace\espnow_conn_test\build\espnow_conn_test.elf D:\Espressif\workspace\espnow_conn_test\build\bootloader\bootloader.elf --force-color -m 'D:\Espressif\python_env\idf6.1_py3.13_env\Scripts\python.exe' 'D:\Espressif\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.1-dev-786-g130fdc7ce7 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 17 2026 18:16:55[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=178ech ( 96492) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00027914 vaddr=3ffb0000 size=04124h ( 16676) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002ba40 vaddr=40080000 size=045d8h ( 17880) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=7fc90h (523408) map[0m
+[0;32mI (325) esp_image: segment 4: paddr=000afcb8 vaddr=400845d8 size=10e60h ( 69216) load[0m
+[0;32mI (353) esp_image: segment 5: paddr=000c0b20 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (364) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (364) boot: Disabling RNG early entropy source...[0m
+[0;32mI (375) cpu_start: Multicore app[0m
+[0;32mI (383) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (383) cpu_start: Pro cpu start user code[0m
+[0;32mI (383) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (385) app_init: Application information:[0m
+[0;32mI (389) app_init: Project name:     espnow_conn_test[0m
+[0;32mI (394) app_init: App version:      2aaab30-dirty[0m
+[0;32mI (398) app_init: Compile time:     Jan 17 2026 18:13:35[0m
+[0;32mI (403) app_init: ELF file SHA256:  d0df2a254...[0m
+[0;32mI (408) app_init: ESP-IDF:          v6.1-dev-786-g130fdc7ce7[0m
+[0;32mI (413) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (417) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (421) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (425) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (431) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (436) heap_init: At 3FFB8540 len 00027AC0 (158 KiB): DRAM[0m
+[0;32mI (441) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (447) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (452) heap_init: At 40095438 len 0000ABC8 (42 KiB): IRAM[0m
+[0;33mW (459) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (471) spi_flash: detected chip: generic[0m
+[0;32mI (474) spi_flash: flash io: dio[0m
+[0;33mW (477) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (491) main_task: Started on CPU0[0m
+[0;32mI (501) main_task: Calling app_main()[0m
+[0;33mW (501) MAIN: >> Info: Waiting for ESP-NOW to start![0m
+[0;33mW (501) ESP-NOW: STARTING ESP-NOW...[0m
+[0;32mI (521) wifi:wifi driver task: 3ffc3e28, prio:23, stack:6656, core=0[0m
+[0;32mI (521) wifi:wifi firmware version: 6a8253a[0m
+[0;32mI (521) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (521) wifi:config nano formatting: disabled[0m
+[0;32mI (531) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (531) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (541) wifi:Init management short buffer num: 32[0m
+[0;32mI (541) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (551) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (551) wifi:Init static rx buffer num: 10[0m
+[0;32mI (551) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (561) wifi_init: rx ba win: 6[0m
+[0;32mI (561) wifi_init: accept mbox: 6[0m
+[0;32mI (561) wifi_init: tcpip mbox: 32[0m
+[0;32mI (571) wifi_init: udp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp tx win: 5760[0m
+[0;32mI (581) wifi_init: tcp rx win: 5760[0m
+[0;32mI (581) wifi_init: tcp mss: 1440[0m
+[0;32mI (581) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (591) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (591) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (681) wifi:mode : sta (78:1c:3c:f6:d6:cc)[0m
+[0;32mI (681) wifi:enable tsf[0m
+[0;32mI (691) ESPNOW: espnow [version: 2.0] init[0m
+[0;33mW (741) ESP-NOW: >> Info: ESP-NOW initiated successfully![0m
+[0;32mI (1001) MAIN: >> Info: Starting to broadcast data[0m
+[0;32mI (1001) MAIN: >> Info: End of Main...[0m
+[0;32mI (1001) main_task: Returned from app_main()[0m
+[1;31mE (1001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (1001) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (1331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (1661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (1991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (2321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (2651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (2981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (3311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (3641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (3971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (4011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (4301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (4631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (4961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (5291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (5621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (5951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (6281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (6611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (6941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (7011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (7271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (7601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (7931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (8261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (8591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (8921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (9251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (9581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (9911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (10011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (10241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (10571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (10901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (11231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (11561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (11891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (12221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (12551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (12881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (13011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (13211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (13541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (13871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (14201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (14531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (14861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (15191) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (15521) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (15851) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (16011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (16181) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (16511) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (16841) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (17171) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (17501) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (17831) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (18161) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (18491) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (18821) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (19011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (19151) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (19481) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (19811) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (20141) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (20471) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (20801) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (21131) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (21461) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (21791) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (22011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (22121) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (22451) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (22781) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (23111) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (23441) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (23771) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (24101) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (24431) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (24761) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (25011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (25091) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (25421) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (25751) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (26081) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (26411) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (26741) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (27071) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (27401) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (27731) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (28011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (28061) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (28391) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (28721) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (29051) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (29381) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (29711) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (30041) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (30371) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (30701) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (31011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (31031) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (31361) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (31691) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (32021) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (32351) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (32681) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (33011) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (33341) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (33671) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (34001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (34011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (34331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (34661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (34991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (35321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (35651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (35981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (36311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (36641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (36971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (37011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (37301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (37631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (37961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (38291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (38621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (38951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (39281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (39611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (39941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (40011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (40271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (40601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (40931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (41261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (41591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (41921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (42251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (42581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (42911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (43011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (43241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (43571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (43901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (44231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (44561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (44891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (45221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (45551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (45881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (46011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (46211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (46541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (46871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (47201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (47531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (47861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (48191) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (48521) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (48851) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (49011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (49181) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (49511) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (49841) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (50171) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (50501) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (50831) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (51161) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (51491) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (51821) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (52011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (52151) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (52481) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (52811) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (53141) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (53471) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (53801) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (54131) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (54461) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (54791) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (55011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (55121) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (55451) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (55781) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (56111) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (56441) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (56771) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (57101) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (57431) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (57761) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (58011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (58091) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (58421) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (58751) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (59081) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (59411) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (59741) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (60071) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (60401) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (60731) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (61011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (61061) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (61391) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (61721) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (62051) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (62381) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (62711) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (63041) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (63371) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (63701) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (64011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (64031) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (64361) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (64691) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (65021) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (65351) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (65681) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (66011) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (66341) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (66671) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (67001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (67011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (67331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (67661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (67991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (68321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (68651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (68981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (69311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (69641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (69971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (70011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (70301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (70631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (70961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (71291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (71621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (71951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (72281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (72611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (72941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (73011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (73271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (73601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (73931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (74261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (74591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (74921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.1-dev-786-g130fdc7ce7 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Jan 17 2026 18:16:55[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=178ech ( 96492) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00027914 vaddr=3ffb0000 size=04124h ( 16676) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002ba40 vaddr=40080000 size=045d8h ( 17880) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=7fc90h (523408) map[0m
+[0;32mI (325) esp_image: segment 4: paddr=000afcb8 vaddr=400845d8 size=10e60h ( 69216) load[0m
+[0;32mI (353) esp_image: segment 5: paddr=000c0b20 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (364) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (364) boot: Disabling RNG early entropy source...[0m
+[0;32mI (375) cpu_start: Multicore app[0m
+[0;32mI (383) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (383) cpu_start: Pro cpu start user code[0m
+[0;32mI (383) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (385) app_init: Application information:[0m
+[0;32mI (389) app_init: Project name:     espnow_conn_test[0m
+[0;32mI (394) app_init: App version:      2aaab30-dirty[0m
+[0;32mI (398) app_init: Compile time:     Jan 17 2026 18:13:35[0m
+[0;32mI (403) app_init: ELF file SHA256:  d0df2a254...[0m
+[0;32mI (408) app_init: ESP-IDF:          v6.1-dev-786-g130fdc7ce7[0m
+[0;32mI (413) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (417) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (421) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (425) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (431) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (436) heap_init: At 3FFB8540 len 00027AC0 (158 KiB): DRAM[0m
+[0;32mI (441) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (447) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (452) heap_init: At 40095438 len 0000ABC8 (42 KiB): IRAM[0m
+[0;33mW (459) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (471) spi_flash: detected chip: generic[0m
+[0;32mI (474) spi_flash: flash io: dio[0m
+[0;33mW (477) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (491) main_task: Started on CPU0[0m
+[0;32mI (501) main_task: Calling app_main()[0m
+[0;33mW (501) MAIN: >> Info: Waiting for ESP-NOW to start![0m
+[0;33mW (501) ESP-NOW: STARTING ESP-NOW...[0m
+[0;32mI (521) wifi:wifi driver task: 3ffc3e28, prio:23, stack:6656, core=0[0m
+[0;32mI (521) wifi:wifi firmware version: 6a8253a[0m
+[0;32mI (521) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (521) wifi:config nano formatting: disabled[0m
+[0;32mI (531) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (531) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (541) wifi:Init management short buffer num: 32[0m
+[0;32mI (541) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (551) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (551) wifi:Init static rx buffer num: 10[0m
+[0;32mI (551) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (561) wifi_init: rx ba win: 6[0m
+[0;32mI (561) wifi_init: accept mbox: 6[0m
+[0;32mI (561) wifi_init: tcpip mbox: 32[0m
+[0;32mI (571) wifi_init: udp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp tx win: 5760[0m
+[0;32mI (581) wifi_init: tcp rx win: 5760[0m
+[0;32mI (581) wifi_init: tcp mss: 1440[0m
+[0;32mI (581) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (591) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (591) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (681) wifi:mode : sta (78:1c:3c:f6:d6:cc)[0m
+[0;32mI (681) wifi:enable tsf[0m
+[0;32mI (691) ESPNOW: espnow [version: 2.0] init[0m
+[0;33mW (741) ESP-NOW: >> Info: ESP-NOW initiated successfully![0m
+[0;32mI (1001) MAIN: >> Info: Starting to broadcast data[0m
+[0;32mI (1001) MAIN: >> Info: End of Main...[0m
+[0;32mI (1001) main_task: Returned from app_main()[0m
+[1;31mE (1001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (1001) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (1331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (1661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (1991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (2321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (2651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (2981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (3311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (3641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (3971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (4011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (4301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (4631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (4961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (5291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (5621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (5951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (6281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (6611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (6941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (7011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (7271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (7601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (7931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (8261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (8591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (8921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (9251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (9581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (9911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (10011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (10241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (10571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (10901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (11231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (11561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (11891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (12221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (12551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (12881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (13011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (13211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (13541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (13871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (14201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (14531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (14861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (15191) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (15521) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (15851) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (16011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (16181) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (16511) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (16841) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (17171) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (17501) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (17831) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (18161) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (18491) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (18821) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (19011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (19151) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (19481) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (19811) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (20141) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (20471) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (20801) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (21131) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (21461) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (21791) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (22011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (22121) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (22451) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (22781) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (23111) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (23441) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (23771) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (24101) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (24431) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (24761) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (25011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (25091) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (25421) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (25751) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (26081) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (26411) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (26741) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (27071) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (27401) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (27731) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (28011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (28061) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (28391) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (28721) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (29051) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (29381) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (29711) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (30041) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (30371) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (30701) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (31011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (31031) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (31361) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (31691) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (32021) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (32351) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (32681) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (33011) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (33341) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (33671) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (34001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (34011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (34331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (34661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (34991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (35321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (35651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (35981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (36311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (36641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (36971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (37011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (37301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (37631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (37961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (38291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (38621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (38951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (39281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (39611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (39941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (40011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (40271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (40601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (40931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (41261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (41591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (41921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (42251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (42581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (42911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (43011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (43241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (43571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (43901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (44231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (44561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (44891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (45221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (45551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (45881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (46011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (46211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (46541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (46871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (47201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (47531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (47861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (48191) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (48521) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (48851) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (49011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (49181) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (49511) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (49841) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (50171) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (50501) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (50831) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (51161) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (51491) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (51821) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (52011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (52151) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (52481) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (52811) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (53141) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (53471) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (53801) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (54131) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (54461) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (54791) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (55011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (55121) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (55451) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (55781) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (56111) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (56441) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (56771) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (57101) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (57431) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (57761) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (58011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (58091) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (58421) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (58751) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (59081) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (59411) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (59741) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (60071) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (60401) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (60731) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (61011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (61061) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (61391) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (61721) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (62051) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (62381) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (62711) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (63041) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (63371) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (63701) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (64011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (64031) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (64361) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (64691) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (65021) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (65351) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (65681) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (66011) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (66341) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (66671) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (67001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (67011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (67331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (67661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (67991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (68321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (68651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (68981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (69311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (69641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (69971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (70011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (70301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (70631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (70961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (71291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (71621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (71951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (72281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (72611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (72941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (73011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (73271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (73601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (73931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (74261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (74591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (74921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (75251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (75581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (75911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (76011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (76241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (76571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (76901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (77231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (77561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (77891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (78221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (78551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (78881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (79011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (79211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (79541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (79871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (80201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (80531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (80861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (81191) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (81521) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (81851) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (82011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (82181) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (82511) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (82841) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (83171) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (83501) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (83831) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (84161) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (84491) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (84821) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (85011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (85151) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (85481) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (85811) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (86141) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (86471) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (86801) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (87131) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (87461) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (87791) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (88011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (88121) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (88451) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (88781) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (89111) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (89441) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (89771) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (90101) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (90431) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (90761) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (91011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (91091) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (91421) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (91751) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (92081) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (92411) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (92741) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (93071) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (93401) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (93731) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (94011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (94061) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (94391) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (94721) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (95051) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (95381) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (95711) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (96041) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (96371) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (96701) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (97011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (97031) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (97361) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (97691) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (98021) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (98351) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (98681) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (99011) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (99341) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (99671) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (100001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (100011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (100331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (100661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (100991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (101321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (101651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (101981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (102311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (102641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (102971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (103011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (103301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (103631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (103961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (104291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (104621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (104951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (105281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (105611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (105941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (106011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (106271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (106601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (106931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (107261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (107591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (107921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (108251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (108581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (108911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (109011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (109241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (109571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (109901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (110231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (110561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (110891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (111221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (111551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (111881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (112011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (112211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (112541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (112871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (113201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (113531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (113861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (114191) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (114521) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (114851) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (115011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (115181) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (115511) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (115841) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (116171) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (116501) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (116831) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (117161) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (117491) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (117821) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (118011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (118151) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (118481) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (118811) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (119141) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (119471) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (119801) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (120131) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (120461) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (120791) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (121011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (121121) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (121451) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (121781) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (122111) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (122441) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (122771) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (123101) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (123431) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (123761) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (124011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (124091) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (124421) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (124751) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (125081) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (125411) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (125741) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (126071) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (126401) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (126731) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (127011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (127061) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (127391) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (127721) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (128051) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (128381) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (128711) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (129041) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (129371) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (129701) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (130011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (130031) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (130361) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (130691) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (131021) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (131351) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (131681) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (132011) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (132341) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (132671) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (133001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (133011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (133331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (133661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (133991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (134321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (134651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (134981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (135311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (135641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (135971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (136011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (136301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (136631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (136961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (137291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (137621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (137951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (138281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (138611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (138941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (139011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (139271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (139601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (139931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (140261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (140591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (140921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (141251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (141581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (141911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (142011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (142241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (142571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (142901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (143231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (143561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (143891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (144221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (144551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (144881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (145011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (145211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (145541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (145871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (146201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (146531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (146861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (147191) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (147521) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (147851) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (148011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (148181) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (148511) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (148841) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (149171) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (149501) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (149831) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (150161) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (150491) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (150821) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (151011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (151151) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (151481) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (151811) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (152141) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (152471) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (152801) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (153131) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (153461) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (153791) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (154011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (154121) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (154451) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (154781) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (155111) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (155441) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (155771) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (156101) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (156431) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (156761) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (157011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (157091) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (157421) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (157751) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (158081) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (158411) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (158741) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (159071) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (159401) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (159731) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (160011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (160061) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (160391) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (160721) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (161051) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (161381) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (161711) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (162041) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (162371) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (162701) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (163011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (163031) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (163361) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (163691) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (164021) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (164351) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (164681) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (165011) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (165341) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (165671) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (166001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (166011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (166331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (166661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (166991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (167321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (167651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (167981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (168311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (168641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (168971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (169011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (169301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (169631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (169961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (170291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (170621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (170951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (171281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (171611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (171941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (172011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (172271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (172601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (172931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (173261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (173591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (173921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (174251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (174581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (174911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (175011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (175241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (175571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (175901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (176231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (176561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (176891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (177221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (177551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (177881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (178011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (178211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (178541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (178871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (179201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (179531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (179861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (180191) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (180521) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (180851) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (181011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (181181) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (181511) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (181841) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (182171) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (182501) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (182831) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (183161) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (183491) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (183821) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (184011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (184151) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (184481) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (184811) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (185141) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (185471) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (185801) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (186131) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (186461) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (186791) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (187011) ESP-NOW: Status & Task Registers: [0m
+1111
+E (187121) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND
+[1;31mE (187451) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (187781) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (188111) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (188441) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (188771) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (189101) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (189431) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (189761) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (190011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (190091) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (190421) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (190751) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (191081) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (191411) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (191741) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (192071) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (192401) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (192731) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (193011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (193061) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (193391) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (193721) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (194051) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (194381) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (194711) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (195041) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (195371) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (195701) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (196011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (196031) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (196361) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (196691) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (197021) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (197351) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (197681) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (198011) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (198341) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (198671) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (199001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (199011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (199331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (199661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (199991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (200321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (200651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (200981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (201311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (201641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (201971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (202011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (202301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (202631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (202961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (203291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (203621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (203951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (204281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (204611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (204941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (205011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (205271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (205601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (205931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (206261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (206591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (206921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (207251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (207581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (207911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (208011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (208241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (208571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (208901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (209231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (209561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (209891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (210221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (210551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (210881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (211011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (211211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (211541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (211871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (212201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (212531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (212861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (213191) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (213521) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (213851) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (214011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (214181) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (214511) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (214841) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (215171) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (215501) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (215831) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (216161) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (216491) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (216821) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (217011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (217151) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (217481) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (217811) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (218141) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (218471) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (218801) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (219131) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (219461) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (219791) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (220011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (220121) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (220451) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (220781) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (221111) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (221441) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (221771) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (222101) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (222431) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (222761) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (223011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (223091) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (223421) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (223751) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (224081) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (224411) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (224741) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (225071) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (225401) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (225731) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (226011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (226061) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (226391) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (226721) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (227051) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (227381) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (227711) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (228041) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (228371) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (228701) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (229011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (229031) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (229361) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (229691) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (230021) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (230351) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (230681) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (231011) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (231341) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (231671) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (232001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (232011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (232331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (232661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (232991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (233321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (233651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (233981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (234311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (234641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (234971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (235011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (235301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (235631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (235961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (236291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (236621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (236951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (237281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (237611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (237941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (238011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (238271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (238601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (238931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (239261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (239591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (239921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (240251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (240581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (240911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (241011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (241241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (241571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (241901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (242231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (242561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (242891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (243221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (243551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (243881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (244011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (244211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (244541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (244871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (245201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (245531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (245861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (246191) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (246521) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (246851) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (247011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (247181) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (247511) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (247841) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (248171) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (248501) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (248831) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (249161) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (249491) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (249821) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (250011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (250151) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (250481) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (250811) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (251141) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (251471) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (251801) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (252131) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (252461) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (252791) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (253011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (253121) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (253451) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (253781) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (254111) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (254441) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (254771) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (255101) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (255431) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (255761) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (256011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (256091) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (256421) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (256751) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (257081) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (257411) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (257741) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (258071) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (258401) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (258731) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (259011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (259061) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (259391) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (259721) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (260051) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (260381) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (260711) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (261041) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (261371) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (261701) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (262011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (262031) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (262361) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (262691) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (263021) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (263351) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (263681) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (264011) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (264341) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (264671) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (265001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (265011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (265331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (265661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (265991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (266321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (266651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (266981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (267311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (267641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (267971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (268011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (268301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (268631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (268961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (269291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (269621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (269951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (270281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (270611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (270941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (271011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (271271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (271601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (271931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (272261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (272591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (272921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (273251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (273581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (273911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (274011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (274241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (274571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (274901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (275231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (275561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (275891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (276221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (276551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (276881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (277011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (277211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (277541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (277871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (278201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (278531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (278861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (279191) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (279521) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (279851) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (280011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (280181) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (280511) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (280841) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (281171) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (281501) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (281831) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (282161) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (282491) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (282821) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (283011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (283151) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (283481) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (283811) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (284141) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (284471) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (284801) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (285131) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (285461) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (285791) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (286011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (286121) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (286451) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (286781) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (287111) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (287441) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (287771) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (288101) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (288431) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (288761) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (289011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (289091) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (289421) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (289751) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (290081) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (290411) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (290741) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (291071) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (291401) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (291731) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (292011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (292061) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (292391) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (292721) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (293051) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (293381) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (293711) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (294041) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (294371) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (294701) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (295011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (295031) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (295361) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (295691) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (296021) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (296351) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (296681) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (297011) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (297341) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (297671) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (298001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (298011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (298331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (298661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (298991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (299321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (299651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (299981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (300311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (300641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (300971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (301011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (301301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (301631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (301961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (302291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (302621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (302951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (303281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (303611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (303941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (304011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (304271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (304601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (304931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (305261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (305591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (305921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (306251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (306581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (306911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (307011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (307241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (307571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (307901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (308231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (308561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (308891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (309221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (309551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (309881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (310011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (310211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (310541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (310871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (311201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (311531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (311861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (312191) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (312521) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (312851) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (313011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (313181) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (313511) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (313841) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (314171) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (314501) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (314831) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (315161) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (315491) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (315821) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (316011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (316151) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (316481) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (316811) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (317141) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (317471) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (317801) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (318131) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (318461) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (318791) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (319011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (319121) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (319451) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (319781) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (320111) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (320441) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (320771) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (321101) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (321431) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (321761) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (322011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (322091) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (322421) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (322751) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (323081) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (323411) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (323741) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (324071) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (324401) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (324731) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (325011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (325061) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (325391) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (325721) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (326051) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (326381) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (326711) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (327041) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (327371) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (327701) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (328011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (328031) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (328361) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (328691) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (329021) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (329351) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (329681) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (330011) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (330341) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (330671) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (331001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (331011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (331331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (331661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (331991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (332321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (332651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (332981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (333311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (333641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (333971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (334011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (334301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (334631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (334961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (335291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (335621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (335951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (336281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (336611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (336941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (337011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (337271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (337601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (337931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (338261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (338591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (338921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (339251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (339581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (339911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (340011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (340241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (340571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (340901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (341231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (341561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (341891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (342221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (342551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (342881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (343011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (343211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (343541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (343871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (344201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (344531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (344861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (345191) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (345521) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (345851) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (346011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (346181) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (346511) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (346841) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (347171) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (347501) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (347831) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (348161) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (348491) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (348821) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (349011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (349151) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (349481) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (349811) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (350141) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (350471) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (350801) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (351131) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (351461) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (351791) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (352011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (352121) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (352451) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (352781) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (353111) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (353441) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (353771) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (354101) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (354431) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (354761) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (355011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (355091) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (355421) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (355751) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (356081) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (356411) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (356741) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (357071) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (357401) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (357731) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (358011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (358061) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (358391) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (358721) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (359051) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (359381) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (359711) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (360041) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (360371) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (360701) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (361011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (361031) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (361361) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (361691) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (362021) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (362351) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (362681) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (363011) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (363341) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (363671) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (364001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (364011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (364331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (364661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (364991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (365321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (365651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (365981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (366311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (366641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (366971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (367011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (367301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (367631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (367961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (368291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (368621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (368951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (369281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (369611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (369941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (370011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (370271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (370601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (370931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (371261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (371591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (371921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (372251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (372581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (372911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (373011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (373241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (373571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (373901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (374231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (374561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (374891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (375221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (375551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (375881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (376011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (376211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (376541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (376871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (377201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (377531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (377861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (378191) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (378521) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (378851) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (379011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (379181) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (379511) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (379841) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (380171) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (380501) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (380831) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (381161) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (381491) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (381821) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (382011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (382151) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (382481) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (382811) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (383141) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (383471) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (383801) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (384131) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (384461) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (384791) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (385011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (385121) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (385451) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (385781) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (386111) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (386441) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (386771) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (387101) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (387431) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (387761) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (388011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (388091) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (388421) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (388751) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (389081) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (389411) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (389741) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (390071) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (390401) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (390731) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (391011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (391061) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (391391) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (391721) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (392051) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (392381) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (392711) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (393041) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (393371) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (393701) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (394011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (394031) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (394361) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (394691) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (395021) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (395351) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (395681) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (396011) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (396341) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (396671) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (397001) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (397011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (397331) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (397661) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (397991) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (398321) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (398651) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (398981) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (399311) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (399641) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (399971) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (400011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (400301) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (400631) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (400961) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (401291) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (401621) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (401951) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (402281) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (402611) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (402941) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (403011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (403271) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (403601) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (403931) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (404261) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (404591) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (404921) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (405251) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (405581) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (405911) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (406011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (406241) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (406571) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (406901) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (407231) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (407561) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (407891) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (408221) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (408551) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (408881) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[0;32mI (409011) ESP-NOW: Status & Task Registers: [0m
+1111
+[1;31mE (409211) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (409541) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (409871) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (410201) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (410531) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
+[1;31mE (410861) SEND DATA: >> Error while sending data: ESP_ERR_ESPNOW_NOT_FOUND[0m
