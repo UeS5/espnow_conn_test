@@ -303,3 +303,12 @@
 16	88	7903798123489586	D:/Espressif/workspace/espnow_conn_test/build/bootloader/CMakeFiles/bootloader_check_size	3214a7300ffa8b5b
 17	87	7903798251213573	CMakeFiles/bootloader_check_size	3214a7300ffa8b5b
 17	87	7903798251213573	D:/Espressif/workspace/espnow_conn_test/build/bootloader/CMakeFiles/bootloader_check_size	3214a7300ffa8b5b
+31	121	7905462352606494	esp-idf/esp_bootloader_format/CMakeFiles/__idf_esp_bootloader_format.dir/esp_bootloader_desc.c.obj	e9a12790f83a4919
+121	411	7905462353512981	esp-idf/esp_bootloader_format/libesp_bootloader_format.a	731523f86c971ae
+411	735	7905462356410705	bootloader.elf	8a71624b27e18128
+735	957	7905462361840543	.bin_timestamp	a8c4ecd425a8d71f
+735	957	7905462361840543	D:/Espressif/workspace/espnow_conn_test/build/bootloader/.bin_timestamp	a8c4ecd425a8d71f
+957	1026	7905462361870777	CMakeFiles/bootloader_check_size	3214a7300ffa8b5b
+957	1026	7905462361870777	D:/Espressif/workspace/espnow_conn_test/build/bootloader/CMakeFiles/bootloader_check_size	3214a7300ffa8b5b
+20	88	7905462595795778	CMakeFiles/bootloader_check_size	3214a7300ffa8b5b
+20	88	7905462595795778	D:/Espressif/workspace/espnow_conn_test/build/bootloader/CMakeFiles/bootloader_check_size	3214a7300ffa8b5b

@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "espnow_conn_test",
-    "project_version":    "2aaab30-dirty",
+    "project_version":    "e0a5b28-dirty",
     "project_path":       "D:/Espressif/workspace/espnow_conn_test",
     "idf_path":           "D:/Espressif/esp-idf",
     "build_dir":          "D:/Espressif/workspace/espnow_conn_test/build",
